@@ -9,6 +9,16 @@ NEON source with an SMT solver (cvc5). For a guided, end-to-end tour of how all 
 pieces fit together — using `qs8-vadd-minmax` as a live example — see
 [`PIPELINE_WALKTHROUGH.md`](PIPELINE_WALKTHROUGH.md).
 
+## Lean verification work
+
+The standalone [Lean development](verification/README.md) adds unbounded behavior
+and simulation rules, assembly-like byte-vector semantics, supporting arithmetic
+lemmas, and documented translation repairs. **Full kernel verification is not
+complete: 11 of the 36 implemented pairs have source-linked intrinsic
+equivalence proofs, under an explicit trusted frontend bridge.** Proof expansion stops here under the revised task scope; the remaining 25 pairs are unproved. See the [technical report](output/pdf/report.pdf) and the
+fail-closed coverage audit for the exact status. No Lean agent is added to the
+translation pipeline.
+
 ## Requirements
 
 - **Python ≥ 3.11**

@@ -1,0 +1,7 @@
+lean/.lake/
+tests/.build/
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+__pycache__/

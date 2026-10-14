@@ -1,0 +1,862 @@
+{
+  "__riscv_vadd_vv_i32m8@addWords32RVV": {
+    "name": "__riscv_vadd_vv_i32m8",
+    "primitive": "addWords32RVV",
+    "signature": "vint32m8_t (vint32m8_t, vint32m8_t, size_t)"
+  },
+  "__riscv_vadd_vv_i32m8_tu@addI32TURVV": {
+    "name": "__riscv_vadd_vv_i32m8_tu",
+    "primitive": "addI32TURVV",
+    "signature": "vint32m8_t (vint32m8_t, vint32m8_t, vint32m8_t, size_t)"
+  },
+  "__riscv_vadd_vv_u32m8@addWords32RVV": {
+    "name": "__riscv_vadd_vv_u32m8",
+    "primitive": "addWords32RVV",
+    "signature": "vuint32m8_t (vuint32m8_t, vuint32m8_t, size_t)"
+  },
+  "__riscv_vadd_vv_u32m8_tu@addI32TURVV": {
+    "name": "__riscv_vadd_vv_u32m8_tu",
+    "primitive": "addI32TURVV",
+    "signature": "vuint32m8_t (vuint32m8_t, vuint32m8_t, vuint32m8_t, size_t)"
+  },
+  "__riscv_vcreate_v_u32m4x2@createU32TupleRVV": {
+    "name": "__riscv_vcreate_v_u32m4x2",
+    "primitive": "createU32TupleRVV",
+    "signature": "vuint32m4x2_t (vuint32m4_t, vuint32m4_t)"
+  },
+  "__riscv_vle32_v_i32m8@loadWords32RVV": {
+    "name": "__riscv_vle32_v_i32m8",
+    "primitive": "loadWords32RVV",
+    "signature": "vint32m8_t (const int32_t *, size_t)"
+  },
+  "__riscv_vle32_v_u32m1@loadU32PackM1": {
+    "name": "__riscv_vle32_v_u32m1",
+    "primitive": "loadU32PackM1",
+    "signature": "vuint32m1_t (const uint32_t *, size_t)"
+  },
+  "__riscv_vle32_v_u32m4@loadU32RVV": {
+    "name": "__riscv_vle32_v_u32m4",
+    "primitive": "loadU32RVV",
+    "signature": "vuint32m4_t (const uint32_t *, size_t)"
+  },
+  "__riscv_vle32_v_u32m8@loadU32RVV": {
+    "name": "__riscv_vle32_v_u32m8",
+    "primitive": "loadU32RVV",
+    "signature": "vuint32m8_t (const uint32_t *, size_t)"
+  },
+  "__riscv_vle32_v_u32m8@loadWords32RVV": {
+    "name": "__riscv_vle32_v_u32m8",
+    "primitive": "loadWords32RVV",
+    "signature": "vuint32m8_t (const uint32_t *, size_t)"
+  },
+  "__riscv_vle8_v_i8m2@loadRVV": {
+    "name": "__riscv_vle8_v_i8m2",
+    "primitive": "loadRVV",
+    "signature": "vint8m2_t (const int8_t *, size_t)"
+  },
+  "__riscv_vle8_v_i8m8@loadRVV": {
+    "name": "__riscv_vle8_v_i8m8",
+    "primitive": "loadRVV",
+    "signature": "vint8m8_t (const int8_t *, size_t)"
+  },
+  "__riscv_vle8_v_u8m2@loadRVV": {
+    "name": "__riscv_vle8_v_u8m2",
+    "primitive": "loadRVV",
+    "signature": "vuint8m2_t (const uint8_t *, size_t)"
+  },
+  "__riscv_vmacc_vx_i32m8@maccI32RVV": {
+    "name": "__riscv_vmacc_vx_i32m8",
+    "primitive": "maccI32RVV",
+    "signature": "vint32m8_t (vint32m8_t, int32_t, vint32m8_t, size_t)"
+  },
+  "__riscv_vmax_vx_i16m4@maxI16RVV": {
+    "name": "__riscv_vmax_vx_i16m4",
+    "primitive": "maxI16RVV",
+    "signature": "vint16m4_t (vint16m4_t, int16_t, size_t)"
+  },
+  "__riscv_vmax_vx_i8m2@maxRVV": {
+    "name": "__riscv_vmax_vx_i8m2",
+    "primitive": "maxRVV",
+    "signature": "vint8m2_t (vint8m2_t, int8_t, size_t)"
+  },
+  "__riscv_vmax_vx_i8m8@maxRVV": {
+    "name": "__riscv_vmax_vx_i8m8",
+    "primitive": "maxRVV",
+    "signature": "vint8m8_t (vint8m8_t, int8_t, size_t)"
+  },
+  "__riscv_vmaxu_vx_u8m2@maxU8RVV": {
+    "name": "__riscv_vmaxu_vx_u8m2",
+    "primitive": "maxU8RVV",
+    "signature": "vuint8m2_t (vuint8m2_t, uint8_t, size_t)"
+  },
+  "__riscv_vmerge_vxm_i16m4@mergeI16RVV": {
+    "name": "__riscv_vmerge_vxm_i16m4",
+    "primitive": "mergeI16RVV",
+    "signature": "vint16m4_t (vint16m4_t, int16_t, vbool4_t, size_t)"
+  },
+  "__riscv_vmin_vx_i8m2@minRVV": {
+    "name": "__riscv_vmin_vx_i8m2",
+    "primitive": "minRVV",
+    "signature": "vint8m2_t (vint8m2_t, int8_t, size_t)"
+  },
+  "__riscv_vmin_vx_i8m8@minRVV": {
+    "name": "__riscv_vmin_vx_i8m8",
+    "primitive": "minRVV",
+    "signature": "vint8m8_t (vint8m8_t, int8_t, size_t)"
+  },
+  "__riscv_vminu_vx_u8m2@minU8RVV": {
+    "name": "__riscv_vminu_vx_u8m2",
+    "primitive": "minU8RVV",
+    "signature": "vuint8m2_t (vuint8m2_t, uint8_t, size_t)"
+  },
+  "__riscv_vmslt_vx_i16m4_b4@lessI16RVV": {
+    "name": "__riscv_vmslt_vx_i16m4_b4",
+    "primitive": "lessI16RVV",
+    "signature": "vbool4_t (vint16m4_t, int16_t, size_t)"
+  },
+  "__riscv_vmul_vx_i32m8@mulI32RVV": {
+    "name": "__riscv_vmul_vx_i32m8",
+    "primitive": "mulI32RVV",
+    "signature": "vint32m8_t (vint32m8_t, int32_t, size_t)"
+  },
+  "__riscv_vmv_v_x_i16m4@dupI16RVV": {
+    "name": "__riscv_vmv_v_x_i16m4",
+    "primitive": "dupI16RVV",
+    "signature": "vint16m4_t (int16_t, size_t)"
+  },
+  "__riscv_vmv_v_x_i32m1@dupI32M1": {
+    "name": "__riscv_vmv_v_x_i32m1",
+    "primitive": "dupI32M1",
+    "signature": "vint32m1_t (int32_t, size_t)"
+  },
+  "__riscv_vmv_v_x_i32m8@dupI32RVV": {
+    "name": "__riscv_vmv_v_x_i32m8",
+    "primitive": "dupI32RVV",
+    "signature": "vint32m8_t (int32_t, size_t)"
+  },
+  "__riscv_vmv_v_x_u16m4@dupI16RVV": {
+    "name": "__riscv_vmv_v_x_u16m4",
+    "primitive": "dupI16RVV",
+    "signature": "vuint16m4_t (uint16_t, size_t)"
+  },
+  "__riscv_vmv_v_x_u32m1@dupI32M1": {
+    "name": "__riscv_vmv_v_x_u32m1",
+    "primitive": "dupI32M1",
+    "signature": "vuint32m1_t (uint32_t, size_t)"
+  },
+  "__riscv_vmv_v_x_u32m1@dupU32PackM1": {
+    "name": "__riscv_vmv_v_x_u32m1",
+    "primitive": "dupU32PackM1",
+    "signature": "vuint32m1_t (uint32_t, size_t)"
+  },
+  "__riscv_vmv_v_x_u32m8@dupI32RVV": {
+    "name": "__riscv_vmv_v_x_u32m8",
+    "primitive": "dupI32RVV",
+    "signature": "vuint32m8_t (uint32_t, size_t)"
+  },
+  "__riscv_vmv_x_s_i32m1_i32@scalarI32RVVS": {
+    "name": "__riscv_vmv_x_s_i32m1_i32",
+    "primitive": "scalarI32RVVS",
+    "signature": "int32_t (vint32m1_t)"
+  },
+  "__riscv_vmv_x_s_u32m1_u32@scalarI32RVVU": {
+    "name": "__riscv_vmv_x_s_u32m1_u32",
+    "primitive": "scalarI32RVVU",
+    "signature": "uint32_t (vuint32m1_t)"
+  },
+  "__riscv_vnclip_wx_i16m4@clipRDN0I16RVV": {
+    "name": "__riscv_vnclip_wx_i16m4",
+    "primitive": "clipRDN0I16RVV",
+    "signature": "vint16m4_t (vint32m8_t, size_t, unsigned int, size_t)"
+  },
+  "__riscv_vnclip_wx_i16m4@clipRNU15RVV": {
+    "name": "__riscv_vnclip_wx_i16m4",
+    "primitive": "clipRNU15RVV",
+    "signature": "vint16m4_t (vint32m8_t, size_t, unsigned int, size_t)"
+  },
+  "__riscv_vnclip_wx_i8m2@clipRDN0RVV": {
+    "name": "__riscv_vnclip_wx_i8m2",
+    "primitive": "clipRDN0RVV",
+    "signature": "vint8m2_t (vint16m4_t, size_t, unsigned int, size_t)"
+  },
+  "__riscv_vnclipu_wx_u8m2@clipUnsignedRDN0RVV": {
+    "name": "__riscv_vnclipu_wx_u8m2",
+    "primitive": "clipUnsignedRDN0RVV",
+    "signature": "vuint8m2_t (vuint16m4_t, size_t, unsigned int, size_t)"
+  },
+  "__riscv_vredsum_vs_i32m8_i32m1@reduceI32RVV": {
+    "name": "__riscv_vredsum_vs_i32m8_i32m1",
+    "primitive": "reduceI32RVV",
+    "signature": "vint32m1_t (vint32m8_t, vint32m1_t, size_t)"
+  },
+  "__riscv_vredsum_vs_u32m8_u32m1@reduceI32RVV": {
+    "name": "__riscv_vredsum_vs_u32m8_u32m1",
+    "primitive": "reduceI32RVV",
+    "signature": "vuint32m1_t (vuint32m8_t, vuint32m1_t, size_t)"
+  },
+  "__riscv_vreinterpret_v_i16m4_u16m4@reinterpretI16": {
+    "name": "__riscv_vreinterpret_v_i16m4_u16m4",
+    "primitive": "reinterpretI16",
+    "signature": "vuint16m4_t (vint16m4_t)"
+  },
+  "__riscv_vreinterpret_v_u16m4_i16m4@reinterpretI16": {
+    "name": "__riscv_vreinterpret_v_u16m4_i16m4",
+    "primitive": "reinterpretI16",
+    "signature": "vint16m4_t (vuint16m4_t)"
+  },
+  "__riscv_vrsub_vx_i16m4@reverseSubI16RVV": {
+    "name": "__riscv_vrsub_vx_i16m4",
+    "primitive": "reverseSubI16RVV",
+    "signature": "vint16m4_t (vint16m4_t, int16_t, size_t)"
+  },
+  "__riscv_vsadd_vx_i16m4@addSatI16RVV": {
+    "name": "__riscv_vsadd_vx_i16m4",
+    "primitive": "addSatI16RVV",
+    "signature": "vint16m4_t (vint16m4_t, int16_t, size_t)"
+  },
+  "__riscv_vse32_v_i32m8@storeWords32RVV": {
+    "name": "__riscv_vse32_v_i32m8",
+    "primitive": "storeWords32RVV",
+    "signature": "void (int32_t *, vint32m8_t, size_t)"
+  },
+  "__riscv_vse32_v_u32m1@storeU32RVV": {
+    "name": "__riscv_vse32_v_u32m1",
+    "primitive": "storeU32RVV",
+    "signature": "void (uint32_t *, vuint32m1_t, size_t)"
+  },
+  "__riscv_vse32_v_u32m8@storeWords32RVV": {
+    "name": "__riscv_vse32_v_u32m8",
+    "primitive": "storeWords32RVV",
+    "signature": "void (uint32_t *, vuint32m8_t, size_t)"
+  },
+  "__riscv_vse8_v_i8m2@storeRVV": {
+    "name": "__riscv_vse8_v_i8m2",
+    "primitive": "storeRVV",
+    "signature": "void (int8_t *, vint8m2_t, size_t)"
+  },
+  "__riscv_vse8_v_i8m8@storeRVV": {
+    "name": "__riscv_vse8_v_i8m8",
+    "primitive": "storeRVV",
+    "signature": "void (int8_t *, vint8m8_t, size_t)"
+  },
+  "__riscv_vse8_v_u8m2@storeRVV": {
+    "name": "__riscv_vse8_v_u8m2",
+    "primitive": "storeRVV",
+    "signature": "void (uint8_t *, vuint8m2_t, size_t)"
+  },
+  "__riscv_vsetvl_e32m4@setvl": {
+    "name": "__riscv_vsetvl_e32m4",
+    "primitive": "setvl",
+    "signature": "size_t (size_t)"
+  },
+  "__riscv_vsetvl_e32m8@setvl": {
+    "name": "__riscv_vsetvl_e32m8",
+    "primitive": "setvl",
+    "signature": "size_t (size_t)"
+  },
+  "__riscv_vsetvl_e8m2@setvl": {
+    "name": "__riscv_vsetvl_e8m2",
+    "primitive": "setvl",
+    "signature": "size_t (size_t)"
+  },
+  "__riscv_vsetvl_e8m8@setvl": {
+    "name": "__riscv_vsetvl_e8m8",
+    "primitive": "setvl",
+    "signature": "size_t (size_t)"
+  },
+  "__riscv_vsetvlmax_e32m1@vlmax32M1": {
+    "name": "__riscv_vsetvlmax_e32m1",
+    "primitive": "vlmax32M1",
+    "signature": "size_t (void)"
+  },
+  "__riscv_vsetvlmax_e32m8@vlmax32M8": {
+    "name": "__riscv_vsetvlmax_e32m8",
+    "primitive": "vlmax32M8",
+    "signature": "size_t (void)"
+  },
+  "__riscv_vsext_vf2_i16m4@extendI8RVV": {
+    "name": "__riscv_vsext_vf2_i16m4",
+    "primitive": "extendI8RVV",
+    "signature": "vint16m4_t (vint8m2_t, size_t)"
+  },
+  "__riscv_vsext_vf2_i32m8@extendI16RVV": {
+    "name": "__riscv_vsext_vf2_i32m8",
+    "primitive": "extendI16RVV",
+    "signature": "vint32m8_t (vint16m4_t, size_t)"
+  },
+  "__riscv_vsext_vf4_i32m8@extendByte32RVVS": {
+    "name": "__riscv_vsext_vf4_i32m8",
+    "primitive": "extendByte32RVVS",
+    "signature": "vint32m8_t (vint8m2_t, size_t)"
+  },
+  "__riscv_vsll_vx_i16m4@shiftI16RVV": {
+    "name": "__riscv_vsll_vx_i16m4",
+    "primitive": "shiftI16RVV",
+    "signature": "vint16m4_t (vint16m4_t, size_t, size_t)"
+  },
+  "__riscv_vsll_vx_i32m8@leftI32RVV": {
+    "name": "__riscv_vsll_vx_i32m8",
+    "primitive": "leftI32RVV",
+    "signature": "vint32m8_t (vint32m8_t, size_t, size_t)"
+  },
+  "__riscv_vsse32_v_u32m4@storeStridedU32RVV": {
+    "name": "__riscv_vsse32_v_u32m4",
+    "primitive": "storeStridedU32RVV",
+    "signature": "void (uint32_t *, ptrdiff_t, vuint32m4_t, size_t)"
+  },
+  "__riscv_vsse32_v_u32m8@storeStridedU32RVV": {
+    "name": "__riscv_vsse32_v_u32m8",
+    "primitive": "storeStridedU32RVV",
+    "signature": "void (uint32_t *, ptrdiff_t, vuint32m8_t, size_t)"
+  },
+  "__riscv_vsseg2e32_v_u32m4x2@storeSegment2U32RVV": {
+    "name": "__riscv_vsseg2e32_v_u32m4x2",
+    "primitive": "storeSegment2U32RVV",
+    "signature": "void (uint32_t *, vuint32m4x2_t, size_t)"
+  },
+  "__riscv_vssra_vx_i32m8@rightRNU32RVV": {
+    "name": "__riscv_vssra_vx_i32m8",
+    "primitive": "rightRNU32RVV",
+    "signature": "vint32m8_t (vint32m8_t, size_t, unsigned int, size_t)"
+  },
+  "__riscv_vwadd_wv_i16m4@widenAddByte16RVVS": {
+    "name": "__riscv_vwadd_wv_i16m4",
+    "primitive": "widenAddByte16RVVS",
+    "signature": "vint16m4_t (vint16m4_t, vint8m2_t, size_t)"
+  },
+  "__riscv_vwadd_wv_i32m8@widenAddHalf32RVVS": {
+    "name": "__riscv_vwadd_wv_i32m8",
+    "primitive": "widenAddHalf32RVVS",
+    "signature": "vint32m8_t (vint32m8_t, vint16m4_t, size_t)"
+  },
+  "__riscv_vwaddu_wv_u16m4@widenAddByte16RVVU": {
+    "name": "__riscv_vwaddu_wv_u16m4",
+    "primitive": "widenAddByte16RVVU",
+    "signature": "vuint16m4_t (vuint16m4_t, vuint8m2_t, size_t)"
+  },
+  "__riscv_vwaddu_wv_u32m8@widenAddHalf32RVVU": {
+    "name": "__riscv_vwaddu_wv_u32m8",
+    "primitive": "widenAddHalf32RVVU",
+    "signature": "vuint32m8_t (vuint32m8_t, vuint16m4_t, size_t)"
+  },
+  "__riscv_vwmul_vv_i32m8@wideningMulI16VectorRVV": {
+    "name": "__riscv_vwmul_vv_i32m8",
+    "primitive": "wideningMulI16VectorRVV",
+    "signature": "vint32m8_t (vint16m4_t, vint16m4_t, size_t)"
+  },
+  "__riscv_vwmul_vx_i32m8@wideningMulI16RVV": {
+    "name": "__riscv_vwmul_vx_i32m8",
+    "primitive": "wideningMulI16RVV",
+    "signature": "vint32m8_t (vint16m4_t, int16_t, size_t)"
+  },
+  "__riscv_vwsub_vx_i16m4@subWideByteRVV": {
+    "name": "__riscv_vwsub_vx_i16m4",
+    "primitive": "subWideByteRVV",
+    "signature": "vint16m4_t (vint8m2_t, int8_t, size_t)"
+  },
+  "__riscv_vwsubu_vx_u16m4@subWideUByteRVV": {
+    "name": "__riscv_vwsubu_vx_u16m4",
+    "primitive": "subWideUByteRVV",
+    "signature": "vuint16m4_t (vuint8m2_t, uint8_t, size_t)"
+  },
+  "__riscv_vzext_vf4_u32m8@extendByte32RVVU": {
+    "name": "__riscv_vzext_vf4_u32m8",
+    "primitive": "extendByte32RVVU",
+    "signature": "vuint32m8_t (vuint8m2_t, size_t)"
+  },
+  "doz@differenceOrZero": {
+    "name": "doz",
+    "primitive": "differenceOrZero",
+    "signature": "size_t (size_t, size_t)"
+  },
+  "floor@floorU64I32": {
+    "name": "floor",
+    "primitive": "floorU64I32",
+    "signature": "double (double)"
+  },
+  "min@minimumU64": {
+    "name": "min",
+    "primitive": "minimumU64",
+    "signature": "size_t (size_t, size_t)"
+  },
+  "round_down_po2@roundDown2": {
+    "name": "round_down_po2",
+    "primitive": "roundDown2",
+    "signature": "size_t (size_t, size_t)"
+  },
+  "salty_assert@assertion": {
+    "name": "salty_assert",
+    "primitive": "assertion",
+    "signature": "void (int)"
+  },
+  "vadd_s32@addWords32x2": {
+    "name": "vadd_s32",
+    "primitive": "addWords32x2",
+    "signature": "int32x2_t (int32x2_t, int32x2_t)"
+  },
+  "vadd_u32@addWords32x2": {
+    "name": "vadd_u32",
+    "primitive": "addWords32x2",
+    "signature": "uint32x2_t (uint32x2_t, uint32x2_t)"
+  },
+  "vaddq_s32@addWords32x4": {
+    "name": "vaddq_s32",
+    "primitive": "addWords32x4",
+    "signature": "int32x4_t (int32x4_t, int32x4_t)"
+  },
+  "vaddq_u32@addWords32x4": {
+    "name": "vaddq_u32",
+    "primitive": "addWords32x4",
+    "signature": "uint32x4_t (uint32x4_t, uint32x4_t)"
+  },
+  "vaddvq_s32@reduceI32x4S": {
+    "name": "vaddvq_s32",
+    "primitive": "reduceI32x4S",
+    "signature": "int32_t (int32x4_t)"
+  },
+  "vaddvq_u32@reduceI32x4U": {
+    "name": "vaddvq_u32",
+    "primitive": "reduceI32x4U",
+    "signature": "uint32_t (uint32x4_t)"
+  },
+  "vaddw_s16@widenAddHalf32S": {
+    "name": "vaddw_s16",
+    "primitive": "widenAddHalf32S",
+    "signature": "int32x4_t (int32x4_t, int16x4_t)"
+  },
+  "vaddw_s8@widenAddByte16S": {
+    "name": "vaddw_s8",
+    "primitive": "widenAddByte16S",
+    "signature": "int16x8_t (int16x8_t, int8x8_t)"
+  },
+  "vaddw_u16@widenAddHalf32U": {
+    "name": "vaddw_u16",
+    "primitive": "widenAddHalf32U",
+    "signature": "uint32x4_t (uint32x4_t, uint16x4_t)"
+  },
+  "vaddw_u8@widenAddByte16U": {
+    "name": "vaddw_u8",
+    "primitive": "widenAddByte16U",
+    "signature": "uint16x8_t (uint16x8_t, uint8x8_t)"
+  },
+  "vbslq_s16@bitSelectI16x8": {
+    "name": "vbslq_s16",
+    "primitive": "bitSelectI16x8",
+    "signature": "int16x8_t (uint16x8_t, int16x8_t, int16x8_t)"
+  },
+  "vcltq_s16@lessI16x8": {
+    "name": "vcltq_s16",
+    "primitive": "lessI16x8",
+    "signature": "uint16x8_t (int16x8_t, int16x8_t)"
+  },
+  "vcombine_s16@combineI16": {
+    "name": "vcombine_s16",
+    "primitive": "combineI16",
+    "signature": "int16x8_t (int16x4_t, int16x4_t)"
+  },
+  "vcombine_s8@combineI8": {
+    "name": "vcombine_s8",
+    "primitive": "combineI8",
+    "signature": "int8x16_t (int8x8_t, int8x8_t)"
+  },
+  "vdup_n_s8@dup8": {
+    "name": "vdup_n_s8",
+    "primitive": "dup8",
+    "signature": "int8x8_t (int8_t)"
+  },
+  "vdup_n_u32@dupU32x2": {
+    "name": "vdup_n_u32",
+    "primitive": "dupU32x2",
+    "signature": "uint32x2_t (uint32_t)"
+  },
+  "vdup_n_u8@dup8": {
+    "name": "vdup_n_u8",
+    "primitive": "dup8",
+    "signature": "uint8x8_t (uint8_t)"
+  },
+  "vdupq_n_s16@dupI16x8": {
+    "name": "vdupq_n_s16",
+    "primitive": "dupI16x8",
+    "signature": "int16x8_t (int16_t)"
+  },
+  "vdupq_n_s32@dupI32x4": {
+    "name": "vdupq_n_s32",
+    "primitive": "dupI32x4",
+    "signature": "int32x4_t (int32_t)"
+  },
+  "vdupq_n_s8@dup16": {
+    "name": "vdupq_n_s8",
+    "primitive": "dup16",
+    "signature": "int8x16_t (int8_t)"
+  },
+  "vdupq_n_u32@dupI32x4": {
+    "name": "vdupq_n_u32",
+    "primitive": "dupI32x4",
+    "signature": "uint32x4_t (uint32_t)"
+  },
+  "vext_s8@extract8": {
+    "name": "vext_s8",
+    "primitive": "extract8",
+    "signature": "int8x8_t (int8x8_t, int8x8_t, const int)"
+  },
+  "vext_u8@extract8": {
+    "name": "vext_u8",
+    "primitive": "extract8",
+    "signature": "uint8x8_t (uint8x8_t, uint8x8_t, const int)"
+  },
+  "vextq_s32@extractWords32x4": {
+    "name": "vextq_s32",
+    "primitive": "extractWords32x4",
+    "signature": "int32x4_t (int32x4_t, int32x4_t, int)"
+  },
+  "vextq_u32@extractWords32x4": {
+    "name": "vextq_u32",
+    "primitive": "extractWords32x4",
+    "signature": "uint32x4_t (uint32x4_t, uint32x4_t, int)"
+  },
+  "vget_high_s16@highI16x4": {
+    "name": "vget_high_s16",
+    "primitive": "highI16x4",
+    "signature": "int16x4_t (int16x8_t)"
+  },
+  "vget_high_u16@highI16x4": {
+    "name": "vget_high_u16",
+    "primitive": "highI16x4",
+    "signature": "uint16x4_t (uint16x8_t)"
+  },
+  "vget_low_s16@lowI16x4": {
+    "name": "vget_low_s16",
+    "primitive": "lowI16x4",
+    "signature": "int16x4_t (int16x8_t)"
+  },
+  "vget_low_s32@lowWords32x2": {
+    "name": "vget_low_s32",
+    "primitive": "lowWords32x2",
+    "signature": "int32x2_t (int32x4_t)"
+  },
+  "vget_low_s8@low8": {
+    "name": "vget_low_s8",
+    "primitive": "low8",
+    "signature": "int8x8_t (int8x16_t)"
+  },
+  "vget_low_u16@lowI16x4": {
+    "name": "vget_low_u16",
+    "primitive": "lowI16x4",
+    "signature": "uint16x4_t (uint16x8_t)"
+  },
+  "vget_low_u32@lowWords32x2": {
+    "name": "vget_low_u32",
+    "primitive": "lowWords32x2",
+    "signature": "uint32x2_t (uint32x4_t)"
+  },
+  "vget_low_u8@low8": {
+    "name": "vget_low_u8",
+    "primitive": "low8",
+    "signature": "uint8x8_t (uint8x16_t)"
+  },
+  "vgetq_lane_s32@laneWords32S": {
+    "name": "vgetq_lane_s32",
+    "primitive": "laneWords32S",
+    "signature": "int32_t (int32x4_t, int)"
+  },
+  "vgetq_lane_u32@laneWords32U": {
+    "name": "vgetq_lane_u32",
+    "primitive": "laneWords32U",
+    "signature": "uint32_t (uint32x4_t, int)"
+  },
+  "vld1_lane_u32@loadLaneU32x2": {
+    "name": "vld1_lane_u32",
+    "primitive": "loadLaneU32x2",
+    "signature": "uint32x2_t (const uint32_t *, uint32x2_t, const int)"
+  },
+  "vld1_s32@loadWords32x2": {
+    "name": "vld1_s32",
+    "primitive": "loadWords32x2",
+    "signature": "int32x2_t (const int32_t *)"
+  },
+  "vld1_s8@load8": {
+    "name": "vld1_s8",
+    "primitive": "load8",
+    "signature": "int8x8_t (const int8_t *)"
+  },
+  "vld1_u32@loadU32x2": {
+    "name": "vld1_u32",
+    "primitive": "loadU32x2",
+    "signature": "uint32x2_t (const uint32_t *)"
+  },
+  "vld1_u32@loadWords32x2": {
+    "name": "vld1_u32",
+    "primitive": "loadWords32x2",
+    "signature": "uint32x2_t (const uint32_t *)"
+  },
+  "vld1_u8@load8": {
+    "name": "vld1_u8",
+    "primitive": "load8",
+    "signature": "uint8x8_t (const uint8_t *)"
+  },
+  "vld1q_s32@loadWords32x4": {
+    "name": "vld1q_s32",
+    "primitive": "loadWords32x4",
+    "signature": "int32x4_t (const int32_t *)"
+  },
+  "vld1q_s8@load16": {
+    "name": "vld1q_s8",
+    "primitive": "load16",
+    "signature": "int8x16_t (const int8_t *)"
+  },
+  "vld1q_u32@loadWords32x4": {
+    "name": "vld1q_u32",
+    "primitive": "loadWords32x4",
+    "signature": "uint32x4_t (const uint32_t *)"
+  },
+  "vld1q_u8@load16": {
+    "name": "vld1q_u8",
+    "primitive": "load16",
+    "signature": "uint8x16_t (const uint8_t *)"
+  },
+  "vld2_lane_u32@load2LaneU32x2": {
+    "name": "vld2_lane_u32",
+    "primitive": "load2LaneU32x2",
+    "signature": "uint32x2x2_t (const uint32_t *, uint32x2x2_t, const int)"
+  },
+  "vmax_s8@max8": {
+    "name": "vmax_s8",
+    "primitive": "max8",
+    "signature": "int8x8_t (int8x8_t, int8x8_t)"
+  },
+  "vmax_u8@maxU8": {
+    "name": "vmax_u8",
+    "primitive": "maxU8",
+    "signature": "uint8x8_t (uint8x8_t, uint8x8_t)"
+  },
+  "vmaxq_s8@max16": {
+    "name": "vmaxq_s8",
+    "primitive": "max16",
+    "signature": "int8x16_t (int8x16_t, int8x16_t)"
+  },
+  "vmin_s8@min8": {
+    "name": "vmin_s8",
+    "primitive": "min8",
+    "signature": "int8x8_t (int8x8_t, int8x8_t)"
+  },
+  "vmin_u8@minU8": {
+    "name": "vmin_u8",
+    "primitive": "minU8",
+    "signature": "uint8x8_t (uint8x8_t, uint8x8_t)"
+  },
+  "vminq_s8@min16": {
+    "name": "vminq_s8",
+    "primitive": "min16",
+    "signature": "int8x16_t (int8x16_t, int8x16_t)"
+  },
+  "vmlaq_s32@mlaI32x4": {
+    "name": "vmlaq_s32",
+    "primitive": "mlaI32x4",
+    "signature": "int32x4_t (int32x4_t, int32x4_t, int32x4_t)"
+  },
+  "vmov_n_u32@dupU32x2": {
+    "name": "vmov_n_u32",
+    "primitive": "dupU32x2",
+    "signature": "uint32x2_t (uint32_t)"
+  },
+  "vmovl_s16@extendI16x4": {
+    "name": "vmovl_s16",
+    "primitive": "extendI16x4",
+    "signature": "int32x4_t (int16x4_t)"
+  },
+  "vmovq_n_s16@dupI16x8": {
+    "name": "vmovq_n_s16",
+    "primitive": "dupI16x8",
+    "signature": "int16x8_t (int16_t)"
+  },
+  "vmovq_n_s32@dupI32x4": {
+    "name": "vmovq_n_s32",
+    "primitive": "dupI32x4",
+    "signature": "int32x4_t (int32_t)"
+  },
+  "vmovq_n_u16@dupI16x8": {
+    "name": "vmovq_n_u16",
+    "primitive": "dupI16x8",
+    "signature": "uint16x8_t (uint16_t)"
+  },
+  "vmovq_n_u32@dupI32x4": {
+    "name": "vmovq_n_u32",
+    "primitive": "dupI32x4",
+    "signature": "uint32x4_t (uint32_t)"
+  },
+  "vmulq_s32@mulI32x4": {
+    "name": "vmulq_s32",
+    "primitive": "mulI32x4",
+    "signature": "int32x4_t (int32x4_t, int32x4_t)"
+  },
+  "vmulq_s8@mulBytes16": {
+    "name": "vmulq_s8",
+    "primitive": "mulBytes16",
+    "signature": "int8x16_t (int8x16_t, int8x16_t)"
+  },
+  "vmulq_u8@mulBytes16": {
+    "name": "vmulq_u8",
+    "primitive": "mulBytes16",
+    "signature": "uint8x16_t (uint8x16_t, uint8x16_t)"
+  },
+  "vpadalq_s16@pairAcc32S": {
+    "name": "vpadalq_s16",
+    "primitive": "pairAcc32S",
+    "signature": "int32x4_t (int32x4_t, int16x8_t)"
+  },
+  "vpadalq_s8@pairAcc16S": {
+    "name": "vpadalq_s8",
+    "primitive": "pairAcc16S",
+    "signature": "int16x8_t (int16x8_t, int8x16_t)"
+  },
+  "vpadalq_u16@pairAcc32U": {
+    "name": "vpadalq_u16",
+    "primitive": "pairAcc32U",
+    "signature": "uint32x4_t (uint32x4_t, uint16x8_t)"
+  },
+  "vpadalq_u8@pairAcc16U": {
+    "name": "vpadalq_u8",
+    "primitive": "pairAcc16U",
+    "signature": "uint16x8_t (uint16x8_t, uint8x16_t)"
+  },
+  "vqaddq_s16@addSatI16x8": {
+    "name": "vqaddq_s16",
+    "primitive": "addSatI16x8",
+    "signature": "int16x8_t (int16x8_t, int16x8_t)"
+  },
+  "vqmovn_s16@narrowSatI8": {
+    "name": "vqmovn_s16",
+    "primitive": "narrowSatI8",
+    "signature": "int8x8_t (int16x8_t)"
+  },
+  "vqmovn_s32@narrowSatI16": {
+    "name": "vqmovn_s32",
+    "primitive": "narrowSatI16",
+    "signature": "int16x4_t (int32x4_t)"
+  },
+  "vqmovun_s16@narrowSatU8": {
+    "name": "vqmovun_s16",
+    "primitive": "narrowSatU8",
+    "signature": "uint8x8_t (int16x8_t)"
+  },
+  "vqrdmulhq_s16@sqrdmulhI16x8": {
+    "name": "vqrdmulhq_s16",
+    "primitive": "sqrdmulhI16x8",
+    "signature": "int16x8_t (int16x8_t, int16x8_t)"
+  },
+  "vreinterpret_u16_s8@reinterpret16": {
+    "name": "vreinterpret_u16_s8",
+    "primitive": "reinterpret16",
+    "signature": "uint16x4_t (int8x8_t)"
+  },
+  "vreinterpret_u16_u8@reinterpret16": {
+    "name": "vreinterpret_u16_u8",
+    "primitive": "reinterpret16",
+    "signature": "uint16x4_t (uint8x8_t)"
+  },
+  "vreinterpret_u32_s8@reinterpret32": {
+    "name": "vreinterpret_u32_s8",
+    "primitive": "reinterpret32",
+    "signature": "uint32x2_t (int8x8_t)"
+  },
+  "vreinterpret_u32_u8@reinterpret32": {
+    "name": "vreinterpret_u32_u8",
+    "primitive": "reinterpret32",
+    "signature": "uint32x2_t (uint8x8_t)"
+  },
+  "vreinterpretq_s16_u16@reinterpretI16": {
+    "name": "vreinterpretq_s16_u16",
+    "primitive": "reinterpretI16",
+    "signature": "int16x8_t (uint16x8_t)"
+  },
+  "vrshlq_s32@rshlI32x4": {
+    "name": "vrshlq_s32",
+    "primitive": "rshlI32x4",
+    "signature": "int32x4_t (int32x4_t, int32x4_t)"
+  },
+  "vshlq_n_s16@shiftI16x8": {
+    "name": "vshlq_n_s16",
+    "primitive": "shiftI16x8",
+    "signature": "int16x8_t (int16x8_t, const int)"
+  },
+  "vst1_lane_s8@storeLane8": {
+    "name": "vst1_lane_s8",
+    "primitive": "storeLane8",
+    "signature": "void (int8_t *, int8x8_t, const int)"
+  },
+  "vst1_lane_u16@storeLane16": {
+    "name": "vst1_lane_u16",
+    "primitive": "storeLane16",
+    "signature": "void (uint16_t *, uint16x4_t, const int)"
+  },
+  "vst1_lane_u32@storeLane32": {
+    "name": "vst1_lane_u32",
+    "primitive": "storeLane32",
+    "signature": "void (uint32_t *, uint32x2_t, const int)"
+  },
+  "vst1_lane_u8@storeLane8": {
+    "name": "vst1_lane_u8",
+    "primitive": "storeLane8",
+    "signature": "void (uint8_t *, uint8x8_t, const int)"
+  },
+  "vst1_s32@storeWords32x2": {
+    "name": "vst1_s32",
+    "primitive": "storeWords32x2",
+    "signature": "void (int32_t *, int32x2_t)"
+  },
+  "vst1_s8@store8": {
+    "name": "vst1_s8",
+    "primitive": "store8",
+    "signature": "void (int8_t *, int8x8_t)"
+  },
+  "vst1_u32@storeU32x2": {
+    "name": "vst1_u32",
+    "primitive": "storeU32x2",
+    "signature": "void (uint32_t *, uint32x2_t)"
+  },
+  "vst1_u32@storeWords32x2": {
+    "name": "vst1_u32",
+    "primitive": "storeWords32x2",
+    "signature": "void (uint32_t *, uint32x2_t)"
+  },
+  "vst1_u8@store8": {
+    "name": "vst1_u8",
+    "primitive": "store8",
+    "signature": "void (uint8_t *, uint8x8_t)"
+  },
+  "vst1q_s32@storeWords32x4": {
+    "name": "vst1q_s32",
+    "primitive": "storeWords32x4",
+    "signature": "void (int32_t *, int32x4_t)"
+  },
+  "vst1q_s8@store16": {
+    "name": "vst1q_s8",
+    "primitive": "store16",
+    "signature": "void (int8_t *, int8x16_t)"
+  },
+  "vst1q_u32@storeWords32x4": {
+    "name": "vst1q_u32",
+    "primitive": "storeWords32x4",
+    "signature": "void (uint32_t *, uint32x4_t)"
+  },
+  "vsubl_s8@subWideBytes": {
+    "name": "vsubl_s8",
+    "primitive": "subWideBytes",
+    "signature": "int16x8_t (int8x8_t, int8x8_t)"
+  },
+  "vsubl_u8@subWideUBytes": {
+    "name": "vsubl_u8",
+    "primitive": "subWideUBytes",
+    "signature": "uint16x8_t (uint8x8_t, uint8x8_t)"
+  },
+  "vsubw_s8@subWideI8": {
+    "name": "vsubw_s8",
+    "primitive": "subWideI8",
+    "signature": "int16x8_t (int16x8_t, int8x8_t)"
+  },
+  "vzip_u32@zipU32x2": {
+    "name": "vzip_u32",
+    "primitive": "zipU32x2",
+    "signature": "uint32x2x2_t (uint32x2_t, uint32x2_t)"
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "schema": 1,
+  "scope": "Missing and empty targets excluded. At user direction, proof expansion stops after signed/unsigned row sums; the remaining implemented targets are explicitly unproved.",
+  "kernels": [
+    {
+      "kernel": "f32-argmaxpool",
+      "source_sha256": "e1038b6c59a957e8d3faa014eef580b87ae4e79baf59c7a68bff4cdf8e0b1fa5",
+      "target_sha256": "bba499affac6bbf7e1898225341ea849ac61da35b18abe277979685faaaee315",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-conv-hwc2chw",
+      "source_sha256": "87a57d56fc8836dd5394e59ab113fd6bd7d328023fc68e214ae0b42168eaea58",
+      "target_sha256": "b23a089df023d37880428b37410aa989f35a8b08ac320297755c7bcf88258f40",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-dwconv-minmax",
+      "source_sha256": "bdb7f141b37fc1f90c29f7ad39b40f34f5c67d44feac1c56529ea995b0fc177e",
+      "target_sha256": "8d2d2ea7811eca04cced77f04ab9e1c40f28cdb3739ce8b49b2c5ca8e6e5310b",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-dwconv2d-chw",
+      "source_sha256": "92203697f6f349fe1519cb50907639a2977d73caa56672f68bd2696e3d7d363d",
+      "target_sha256": "42355c58d8cdc399e4e3cf9fd9d597b016b06543c509bf6bfcd29a4617500112",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-f16-vcvt",
+      "source_sha256": "41a081db8c9503ca62f077ad790dd92d92f2fe374e554cef8a9baf35dabd2aaa",
+      "target_sha256": "35730ec8f13c282e4b690536c738cce15a455f03eb649395253cf8be4712f851",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-gemm-minmax",
+      "source_sha256": "b8f827cb5936e5333a0144d793e541730bf3e33ca538d46d42c92f86b9751c61",
+      "target_sha256": "9ae2f510ae8991e8dc80606edd0fb4595e02d11dcba6ae57974e7b5ef0b2b4b7",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-igemm-minmax",
+      "source_sha256": "e7a1cb0fa88abfc4588d289781c03daf29832466fbdcc88861fc3f6cf2683b6a",
+      "target_sha256": "960f7d27592187438b259058dc694e42c369fb7bf82c7c3d5729fadbe86c42fd",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-maxpool",
+      "source_sha256": "c90b55eac3dd217b87d0a05a10b1335852a6922e41d8b622fb0eb06c13ad42f5",
+      "target_sha256": "0194ef9ea40d42ba0496069edf1afa54073893df273b58d00c91ad95faadc894",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-raddstoreexpminusmax",
+      "source_sha256": "fb265d6a10ab6ada1ce0daf24fa8bf3331ffe45dd70067978ec1a0f641cd0460",
+      "target_sha256": "6e1ab79fd2111d250c4cf668e2d446abb159e35196eddda5aeb3e1314f5124d5",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-spmm-minmax",
+      "source_sha256": "b12e3790357f402147418cd26a06882e3203b4b163fa57446cd85d521b4e1c9c",
+      "target_sha256": "61ad8d241d07af54559f6ece79456be99b5652c9c388aab87b4fea74a2c235a6",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vadd",
+      "source_sha256": "f7f8f8ffaca807aaa9839ba199fb93bac5cf79700c6c5d2f847731b0ab33eeb5",
+      "target_sha256": "125ad78255c13cb86ccb369c82a581d156de14e36513352530f03e828b9244ce",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vcmul",
+      "source_sha256": "7423e0c197640edfd66522ce2909e9e3e22571ee23c015b7feea32651b661294",
+      "target_sha256": "cc6c77956d0bbcc16d0ab84f78cc35c195634e25b6c02b9f2fd465b8c3c13486",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vdiv",
+      "source_sha256": "164726f8a2ec091ab058ee19dbdd943d89d0a0eb7b7a72b5a8aa646f83c53aa0",
+      "target_sha256": "d3a6b1206ece4f923e6151dacb99781628fd053ba2af91262cb6c4fb6d3d366c",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vlrelu",
+      "source_sha256": "4c8689e540b354176daea7b00a01e854917c738f74ba4a3fcca01f944118e3b6",
+      "target_sha256": "682d136f5c7ac833199fcf0e5f9f83f8c169634de72cc55a0effa99676c5516e",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vmax",
+      "source_sha256": "09e27c12a074f0ebac6fb78c055dc8244be915827771359afa16f70527360552",
+      "target_sha256": "b2e5d54f77ed5d3f1d70c86e416170e42fa3ac7e5b6d5623c0baced8c3eb8ef5",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vmin",
+      "source_sha256": "e7c9e8d03d5bd59bcb91167285c54565a571a406eae8fb9554e86a639a1e7be1",
+      "target_sha256": "8a4722c53a91b0b250c4249d932af857b3a48eb43089805c7f8551e853dcda8f",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vmul",
+      "source_sha256": "260f2fefce97565f686fe95b968688d9be83c9fe8c6724d9cbab30632df8df6c",
+      "target_sha256": "b9a2ba2068aba4ab82ba5fe53a6ec023e2a6cc23e2ab9129c55cfe4679de3cff",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vmulc",
+      "source_sha256": "6d44346474e9925f74ff0243cb4fb4e3111afedfb0db976972f5f19ab7419bdb",
+      "target_sha256": "65bb6ef6ebfb80dd98162736ad7af66424a5be93b6309b5d1d3ef3b38f87fe17",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vrndne",
+      "source_sha256": "b02a27bfc9953ba14c6a43c583a566ebf6c41966beebdaa7143042fd4cf319fe",
+      "target_sha256": "29488445db06359d64d9aef2c5477f2fc6ef750733287ca5c75f553f8ea1b530",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vsqrt",
+      "source_sha256": "b4970661c787e642b8428f213a4b60bd894f4a63704ffc31ec96087beab4ef3e",
+      "target_sha256": "716b38105b50fc9990368b49bb5b09e2f6ea67afab61d08fa0434bc3af736e91",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "f32-vsub",
+      "source_sha256": "35f7b6696edf0f22cad1375a3033484f400cf40a8c26d25c163b3bce8c722e2d",
+      "target_sha256": "e4f2f2d44c34698d1467ba23b434bd7f3531978c5bbbb3f2ef5412e5a14999a1",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qd8-f32-qc4w-gemm-minmax",
+      "source_sha256": "3a234e610298f7998ea073c3c75940beece0ad5d4f5506394465fd902a647b40",
+      "target_sha256": "94971a31dcc1bbf276c4bf024e93f86b618d011b28816342040dc40e1aa22627",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qd8-f32-qc8w-gemm-minmax",
+      "source_sha256": "07cd24e14b360e03b6dba2bab6f0c5e6f081ac0f78869317094dbd0b8edeed70",
+      "target_sha256": null,
+      "status": "excluded_missing_target",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qd8-f32-qc8w-igemm-minmax",
+      "source_sha256": "4547988ffad20dcf9a94335805d7901d6732aa659c2fbe2dc490d8c90a44bfc8",
+      "target_sha256": null,
+      "status": "excluded_missing_target",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qs8-f32-vcvt",
+      "source_sha256": "d8dbc84351f0154858b2bd940ea42a1e3031ec75a03640a4842a164e219a4063",
+      "target_sha256": "407dd1c3b927c122de70ce9709cb8aa419d70c7aec219996baa0132723f7534a",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qs8-qc8w-gemm-minmax-fp32",
+      "source_sha256": "b7b38e737e2cd3f9372b692deb4f2f88681f799b92f005ad9492da1581b18119",
+      "target_sha256": null,
+      "status": "excluded_missing_target",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qs8-rdsum",
+      "source_sha256": "63798158b69457fe965a29a3b3371fa3dd7785c13182b75aa4b9c09704dd4d20",
+      "target_sha256": "338f2b3574d4f206854e67bbe7fe26eba69e699c063171ae1df9654d49e112e4",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QS8Rdsum.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qs8-rsum",
+      "source_sha256": "a9c2c61d1872d119dec43fa4f6b5caae5916a4d0ae396b8deff4517448a3f9a5",
+      "target_sha256": "176e9b0cbfa7c845c7a1e09b3092bf9b509297b56ce8b670427df88f535cde8b",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QS8Rsum.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qs8-vadd-minmax",
+      "source_sha256": "01a0bdcc9344c5f095a47a79ce0d346bd44e937ceceefd1f12e275f9091456f3",
+      "target_sha256": "22a63ec4c31e3b6ad09f4cb6908ae578bd51d0de2de1129637f8395434a9abaf",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QS8Add.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qs8-vcvt",
+      "source_sha256": "715bd7cd48e9241c1a56b287cbfc2c7e2fbbc100e22226abea93d438b137530d",
+      "target_sha256": "9d1abdf3c8b83529090deda36387e8ccf6cda1b0ac150edb767d758678bc45ec",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QS8Convert.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qs8-vlrelu",
+      "source_sha256": "b855a4d1ecc42155b81c2355ce28f221a884bf732625c53e1000ca596abf9d4f",
+      "target_sha256": "a6821a3561b7dc9d7be3d1d0ba5582840fac0fa88c4c821abc55b8a831c5f234",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QS8Leaky.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qs8-vmul-minmax-fp32",
+      "source_sha256": "cb4168849636fc68af462e57bcf80141316833b34dca0c7861f1b6dfa26cb390",
+      "target_sha256": "282553a7233d358e832ec10aa624a0c4caa7160a91187a1cf320db9f475f9718",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qu8-f32-vcvt",
+      "source_sha256": "eaeb29597359201f0e2e13a964c0e883f08af9120ae4ee95360a96cadfbe8fd1",
+      "target_sha256": "9b46b2e5c245b3305d75e5228f8891b45709665356206e8481d51dd63164b720",
+      "status": "pending",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "qu8-rdsum",
+      "source_sha256": "513063b3667ea19323f67b1c8076e6aa34be3a475adaf7e22e9cd1c8701f6054",
+      "target_sha256": "98ed75dac4eb23270fae1b67c8760e2acafb0577450ed83c2e21b0651f3a98e5",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QU8Rdsum.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qu8-rsum",
+      "source_sha256": "47afcdb91951923a487ed321e63f283bf3d9a97bb006ce16b165f62f7378e09b",
+      "target_sha256": "f44a9addcab95a4f9c57e3c65818c05b332d3a6aa9a3fc59ce1fc4cc3943e494",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QU8Rsum.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "qu8-vadd-minmax",
+      "source_sha256": "7f6435954cc0ac4ab31881da9ff8b16f04abdfc8da0c1a945b15b64f3bcb2294",
+      "target_sha256": "d4e563118b8ef54d40a4cfae1148173805f972117ff03c472a68a5083fcbb85d",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.QU8Add.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "s8-vclamp",
+      "source_sha256": "4edb4d3c7d185bb0c969664c7408e7161b01a7d0f52cc651d2919c9d9e6bda7f",
+      "target_sha256": "109360a580298b5e412f3808356668b6511f40b5c9441967c2f060a03fc2ea4e",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.S8Clamp.Execution.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "u8-vclamp",
+      "source_sha256": "e52c7c97805aec65922f07f19c7496015596e375b17306258f9e5f4805528f57",
+      "target_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "excluded_missing_target",
+      "theorem": null,
+      "machine_lifting": null
+    },
+    {
+      "kernel": "x32-packw-gemm-goi",
+      "source_sha256": "3804caddb205c82d2b27a8f882a1774380c55802e974c43f7bf845870d6db143",
+      "target_sha256": "855035f4e579a7a69317ea26ae3a59102b34e9deff4b2539c3e95b2b2be55ab3",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.X32Pack.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    },
+    {
+      "kernel": "x32-transposec",
+      "source_sha256": "8493c77a023aa7d43fdbf559c7316a242cb5ed529b56b63c66bc2a7693b2fd3a",
+      "target_sha256": "c5d70b72e1aad6b1a747926134b8bf4f43ffd84d0b7ad8b00bb9d636043340ba",
+      "status": "proved_intrinsic",
+      "theorem": "Salty.Kernels.X32Transpose.behavior_equivalent",
+      "machine_lifting": "trusted-clang-ast-intrinsics-v1"
+    }
+  ]
+}

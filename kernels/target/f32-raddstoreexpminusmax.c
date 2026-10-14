@@ -26,11 +26,15 @@ void test_rvv(
 
   const float vi_max = *max;
 
-  size_t vlmax = __riscv_vsetvlmax_e32m4();
+  // Preserve the four independent NEON accumulation chains. Changing this
+  // width or using an unordered reduction changes floating-point rounding.
+  size_t vlmax = __riscv_vsetvl_e32m4(4);
   vfloat32m4_t vacc = __riscv_vfmv_v_f_f32m4(0.0f, vlmax);
+  const size_t tail_count = n % 4;
+  float tail[4] = {0.0f, 0.0f, 0.0f, 0.0f};
 
   while (n > 0) {
-    size_t vl = __riscv_vsetvl_e32m4(n);
+    size_t vl = __riscv_vsetvl_e32m4(n < 4 ? n : 4);
 
     vfloat32m4_t vi = __riscv_vle32_v_f32m4(input, vl);
     input += vl;
@@ -69,13 +73,20 @@ void test_rvv(
     __riscv_vse32_v_f32m4(output, vf, vl);
     output += vl;
 
-    vacc = __riscv_vfadd_vv_f32m4_tu(vacc, vacc, vf, vl);
+    if (n >= 4) {
+      vacc = __riscv_vfadd_vv_f32m4_tu(vacc, vacc, vf, vl);
+    } else {
+      __riscv_vse32_v_f32m4(tail, vf, vl);
+    }
 
     n -= vl;
   }
 
-  size_t vlmax_m1 = __riscv_vsetvlmax_e32m1();
-  vfloat32m1_t vzero = __riscv_vfmv_v_f_f32m1(0.0f, vlmax_m1);
-  vfloat32m1_t vsum = __riscv_vfredusum_vs_f32m4_f32m1(vacc, vzero, vlmax);
-  *sum = __riscv_vfmv_f_s_f32m1_f32(vsum);
+  float lanes[4];
+  __riscv_vse32_v_f32m4(lanes, vacc, vlmax);
+  // AArch64 FADDP grouping, followed by the source's 2/1-element tail.
+  float total = (lanes[0] + lanes[1]) + (lanes[2] + lanes[3]);
+  if (tail_count & 2) total += tail[0] + tail[1];
+  if (tail_count & 1) total += tail[tail_count & 2];
+  *sum = total;
 }

@@ -130,14 +130,14 @@ void test_rvv(
           for (int c_in = 0; c_in < 3; c_in++) {
             int32_t scalar_offset = (dx * 3 + c_in) * 4;
             // Per-lane offset is (lane+ow_done)*24 + scalar_offset: a fixed 24-byte stride,
-            // so a strided load + mask-merge replaces the indexed gather (same values).
+            // Mask the memory access itself: padding lanes must not read before/after a row.
             const ptrdiff_t v_off = (ptrdiff_t)ow_done * 24 + scalar_offset;
             const ptrdiff_t v_str = 24;
-            vfloat32m1_t v_in0 = __riscv_vmerge_vvm_f32m1(v_zero, __riscv_vlse32_v_f32m1((const float*)((uintptr_t)i0_base + v_off), v_str, vl), mask, vl);
-            vfloat32m1_t v_in1 = __riscv_vmerge_vvm_f32m1(v_zero, __riscv_vlse32_v_f32m1((const float*)((uintptr_t)i1_base + v_off), v_str, vl), mask, vl);
-            vfloat32m1_t v_in2 = __riscv_vmerge_vvm_f32m1(v_zero, __riscv_vlse32_v_f32m1((const float*)((uintptr_t)i2_base + v_off), v_str, vl), mask, vl);
-            vfloat32m1_t v_in3 = __riscv_vmerge_vvm_f32m1(v_zero, __riscv_vlse32_v_f32m1((const float*)((uintptr_t)i3_base + v_off), v_str, vl), mask, vl);
-            vfloat32m1_t v_in4 = __riscv_vmerge_vvm_f32m1(v_zero, __riscv_vlse32_v_f32m1((const float*)((uintptr_t)i4_base + v_off), v_str, vl), mask, vl);
+            vfloat32m1_t v_in0 = __riscv_vlse32_v_f32m1_tumu(mask, v_zero, (const float*)((uintptr_t)i0_base + v_off), v_str, vl);
+            vfloat32m1_t v_in1 = __riscv_vlse32_v_f32m1_tumu(mask, v_zero, (const float*)((uintptr_t)i1_base + v_off), v_str, vl);
+            vfloat32m1_t v_in2 = __riscv_vlse32_v_f32m1_tumu(mask, v_zero, (const float*)((uintptr_t)i2_base + v_off), v_str, vl);
+            vfloat32m1_t v_in3 = __riscv_vlse32_v_f32m1_tumu(mask, v_zero, (const float*)((uintptr_t)i3_base + v_off), v_str, vl);
+            vfloat32m1_t v_in4 = __riscv_vlse32_v_f32m1_tumu(mask, v_zero, (const float*)((uintptr_t)i4_base + v_off), v_str, vl);
 
             for (int ky = 0; ky < 3; ky++) {
               vfloat32m1_t v_in_row0 = (ky == 0) ? v_in0 : (ky == 1) ? v_in1 : v_in2;

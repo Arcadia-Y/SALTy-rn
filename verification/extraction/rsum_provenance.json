@@ -1,0 +1,53 @@
+{
+  "abi": "LP64, little endian, 8-bit bytes",
+  "claim": "AST provenance only; see separately checked Lean theorem registry",
+  "compiler": "Homebrew clang version 23.1.3\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /opt/homebrew/Cellar/llvm/23.1.3_1/bin\n",
+  "flags": [
+    "-ffreestanding",
+    "-std=c11",
+    "-Werror",
+    "-nostdinc (model only)",
+    "--target=aarch64 (NEON)",
+    "--target=riscv64 -march=rv64gcv -mabi=lp64d (RVV)"
+  ],
+  "models": {
+    "verification/lean/Salty/Generated/QS8RsumNeon.lean": "1c9376ef26f4298fbb66a0c2574931825bb056c7b229053182d78a4af671b0ac",
+    "verification/lean/Salty/Generated/QS8RsumRvv.lean": "83aa1521dcd1868f143bf48b5db0d044ee9810b0f2d15e6c33f699e49289f2f3",
+    "verification/lean/Salty/Generated/QU8RsumNeon.lean": "44baeb8f769e7182fe95c76bf5a26b4d10910526d652756e3102f0c2cfb0dc6b",
+    "verification/lean/Salty/Generated/QU8RsumRvv.lean": "841d6a4a556cd514e3a626926dd45b646e58729f69bb1b133e20188e09b10e8e"
+  },
+  "profile": "rsum",
+  "real_header_dependency_closure": {
+    "clang-resource/include/__stddef_header_macro.h": "4cf46e8fbb809df048eecbbd63686fa741da27afa8db4245bd1f61c1fb1611dc",
+    "clang-resource/include/__stddef_max_align_t.h": "3c1e4de47f4f06b35e2c5890d670052e84f716760505ff51b022fc8b21a9400f",
+    "clang-resource/include/__stddef_null.h": "b1d71b08563ab3d2c22a1e4f8ddf4d9a1111c89e9404b859a45c307e8ebc6c69",
+    "clang-resource/include/__stddef_offsetof.h": "e5f0f4ff8ff5fc6a1cc8b535f5065f1728eadd2bf1e1401f021f803ec7b4222f",
+    "clang-resource/include/__stddef_ptrdiff_t.h": "b4178a57f3711b7013cba747a72a2f178c29fa9364e77d75b2159754072ced43",
+    "clang-resource/include/__stddef_size_t.h": "d86ddc0238da09b385846ebef814ffc50a44e40cf85d4e3793f485952b7e73ad",
+    "clang-resource/include/__stddef_wchar_t.h": "1900d4998aef3698b06399ed686db0c21e26509b08638a25734fb97ae89b1001",
+    "clang-resource/include/arm_bf16.h": "87f7bc1cb7aa53a85347bd4e1855cccd45599408bb106e66515519c1033a6a3d",
+    "clang-resource/include/arm_neon.h": "4a2ea7589accb7524eef74e9991c692d5c15059239781076b26ae230a358f20e",
+    "clang-resource/include/arm_vector_types.h": "6fe5730cbf5b4760620d643e5b44c9abbb13969b168dd7733252158503003034",
+    "clang-resource/include/riscv_vector.h": "0b2935200cbc025adf58f0931e0b9ec9e4f27aa08938c893b71755f8c0a318d5",
+    "clang-resource/include/stddef.h": "b3e62a046ddf28d09eedebe6eb9461cb7060e47cad2c69964b222c4eea10347e",
+    "clang-resource/include/stdint.h": "5e0ab094f39830fafd0ecde083d329c423378ff325142a52700b17773977f6c3",
+    "verification/extraction/rsum_context.h": "e82572362e6e6971a5a4fc18a70de185a468378d3607f877c4986daa5103d111"
+  },
+  "schema": 2,
+  "sources": {
+    "kernels/source/qs8-rsum.c": "a9c2c61d1872d119dec43fa4f6b5caae5916a4d0ae396b8deff4517448a3f9a5",
+    "kernels/source/qu8-rsum.c": "47afcdb91951923a487ed321e63f283bf3d9a97bb006ce16b165f62f7378e09b",
+    "kernels/target/qs8-rsum.c": "176e9b0cbfa7c845c7a1e09b3092bf9b509297b56ce8b670427df88f535cde8b",
+    "kernels/target/qu8-rsum.c": "f44a9addcab95a4f9c57e3c65818c05b332d3a6aa9a3fc59ce1fc4cc3943e494"
+  },
+  "trusted_files": {
+    "verification/extraction/abi.json": "e38351e9f923c9df8c620506fc949b590e1c106312214e80b48febdd87a4d6b5",
+    "verification/extraction/extract.py": "12976ab220c196949211ef758f8a52a7c2702d24b214c0671c29fbcfa901c27a",
+    "verification/extraction/extract_rsum.py": "e54959dd55944b1be57e0a67a68a66a0724076b3362bae3aac9eb0d8880e7dae",
+    "verification/extraction/frontend.py": "d63ad332553d79c7b95c531ae657315ba3bb1d88c7444a2f7bac6fa8268a1f75",
+    "verification/extraction/intrinsics.json": "7df260d7ab2dfcafcfec71c3ae39dc52b39b8619c282f509b65c1d16d2006f64",
+    "verification/extraction/profiles.json": "23f26dbe08f4733cfd26f26dda4887284286b17d5603bf101ebb19e79f56bae1",
+    "verification/extraction/rsum_context.h": "e82572362e6e6971a5a4fc18a70de185a468378d3607f877c4986daa5103d111",
+    "verification/extraction/rsum_intrinsics.h": "325a612920272b3010f1c6c98d879d5dde9960ab295a17a28b644eeeb7c36bd6"
+  }
+}

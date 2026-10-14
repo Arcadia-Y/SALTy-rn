@@ -1,0 +1,171 @@
+{
+  "object_sizes": {
+    "int32_t": 4,
+    "int8_t": 1,
+    "uint32_t": 4,
+    "uint8_t": 1
+  },
+  "records": {
+    "struct xnn_qs8_add_minmax_params *": {
+      "a_multiplier": [
+        "int32_t",
+        "param",
+        "8"
+      ],
+      "a_zero_point": [
+        "int8_t",
+        "param8",
+        "0"
+      ],
+      "b_multiplier": [
+        "int32_t",
+        "param",
+        "12"
+      ],
+      "b_zero_point": [
+        "int8_t",
+        "param8",
+        "1"
+      ],
+      "bias": [
+        "int32_t",
+        "param",
+        "4"
+      ],
+      "output_max": [
+        "int8_t",
+        "param8",
+        "23"
+      ],
+      "output_min": [
+        "int8_t",
+        "param8",
+        "22"
+      ],
+      "output_zero_point": [
+        "int16_t",
+        "param16",
+        "20"
+      ],
+      "shift": [
+        "int32_t",
+        "param",
+        "16"
+      ]
+    },
+    "struct xnn_qs8_cvt_params *": {
+      "input_zero_point": [
+        "int16_t",
+        "param16",
+        "0"
+      ],
+      "multiplier": [
+        "int32_t",
+        "param",
+        "4"
+      ],
+      "output_zero_point": [
+        "int16_t",
+        "param16",
+        "8"
+      ]
+    },
+    "struct xnn_qs8_lrelu_params *": {
+      "input_zero_point": [
+        "int32_t",
+        "param",
+        "0"
+      ],
+      "negative_multiplier": [
+        "int32_t",
+        "param",
+        "8"
+      ],
+      "output_zero_point": [
+        "int32_t",
+        "param",
+        "12"
+      ],
+      "positive_multiplier": [
+        "int32_t",
+        "param",
+        "4"
+      ]
+    },
+    "struct xnn_qu8_add_minmax_params *": {
+      "a_multiplier": [
+        "int32_t",
+        "param",
+        "8"
+      ],
+      "a_zero_point": [
+        "uint8_t",
+        "paramU8",
+        "0"
+      ],
+      "b_multiplier": [
+        "int32_t",
+        "param",
+        "12"
+      ],
+      "b_zero_point": [
+        "uint8_t",
+        "paramU8",
+        "1"
+      ],
+      "bias": [
+        "int32_t",
+        "param",
+        "4"
+      ],
+      "output_max": [
+        "uint8_t",
+        "paramU8",
+        "23"
+      ],
+      "output_min": [
+        "uint8_t",
+        "paramU8",
+        "22"
+      ],
+      "output_zero_point": [
+        "int16_t",
+        "param16",
+        "20"
+      ],
+      "shift": [
+        "int32_t",
+        "param",
+        "16"
+      ]
+    },
+    "struct xnn_s8_minmax_params *": {
+      "max": [
+        "int32_t",
+        "param",
+        "4"
+      ],
+      "min": [
+        "int32_t",
+        "param",
+        "0"
+      ]
+    }
+  },
+  "scalar_types": {
+    "__size_t": "u64",
+    "int": "i32",
+    "int16_t": "i16",
+    "int32_t": "i32",
+    "int8_t": "i8",
+    "long": "i64",
+    "ptrdiff_t": "i64",
+    "size_t": "u64",
+    "uint16_t": "u16",
+    "uint32_t": "u32",
+    "uint8_t": "u8",
+    "uintptr_t": "u64",
+    "unsigned int": "u32",
+    "unsigned long": "u64"
+  }
+}

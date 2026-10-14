@@ -3004,6 +3004,29 @@ inline vfloat32m1_t __riscv_vlse32_v_f32m1(const float* p, ptrdiff_t stride, siz
     return RVVVector(tm, 32, lanes);
 }
 
+// Mask/tail-undisturbed strided load. In particular, an inactive padding lane
+// must not call findBuffer for an address before the allocation. The current
+// buffer model has concrete addresses, so reject symbolic access masks rather
+// than silently treating conditional memory safety as unconditional safety.
+inline vfloat32m1_t __riscv_vlse32_v_f32m1_tumu(
+        const MaskVector& mask, const vfloat32m1_t& maskedoff,
+        const float* p, ptrdiff_t stride, size_t vl) {
+    if (mask.size() < vl || maskedoff.getVL() < vl)
+        throw std::runtime_error("masked strided load: insufficient lanes");
+    auto& tm = g_ctx->tm;
+    std::vector<Term> lanes = maskedoff.elements();
+    for (size_t i = 0; i < vl; i++) {
+        Term active = g_ctx->solver->simplify(fold_eq(tm, mask.getBit(i), mk_bv_val(tm, 1, 1)));
+        if (!active.isBooleanValue())
+            throw std::runtime_error("masked strided load: symbolic access mask unsupported");
+        if (!active.getBooleanValue()) continue;
+        const float* lp = (const float*)((uintptr_t)p + i * (size_t)stride);
+        auto& buffer = g_ctx->findBuffer(lp);
+        lanes[i] = buffer.loadScalar(buffer.ptrToByteOffset(lp), 32);
+    }
+    return RVVVector(tm, 32, lanes);
+}
+
 // --- FP64 helpers (mirror fp32 helpers but with sort {11, 53}) ------------
 inline Term rvv_load_as_fp64(TermManager& tm, Term bv64) {
     Op op = tm.mkOp(Kind::FLOATINGPOINT_TO_FP_FROM_IEEE_BV, {11, 53});

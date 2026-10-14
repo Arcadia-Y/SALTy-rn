@@ -15,7 +15,11 @@ void test_rvv(
   const uint8_t b_zero_point = params->scalar.b_zero_point;
   const int32_t a_multiplier = params->scalar.a_multiplier;
   const int32_t b_multiplier = params->scalar.b_multiplier;
-  const int32_t shift = params->scalar.shift;
+  /* NEON SRSHL uses the signed low byte of the negated raw count.
+   * RVV shifts mask to five bits, so decode direction and wide counts first.
+   * Unsigned negation keeps this scalar calculation defined for every bit pattern. */
+  const uint32_t shift_byte = (0u - (uint32_t)params->scalar.shift) & 255u;
+  const int32_t shift = (int32_t)shift_byte - (shift_byte >= 128u ? 256 : 0);
   const int16_t output_zero_point = params->scalar.output_zero_point;
   const uint8_t output_min = params->scalar.output_min;
   const uint8_t output_max = params->scalar.output_max;
@@ -40,11 +44,12 @@ void test_rvv(
     vint32m8_t vxb32 = __riscv_vsext_vf2_i32m8(vxb, vl);
     vacc = __riscv_vmacc_vx_i32m8(vacc, b_multiplier, vxb32, vl);
 
-    // Rounding shift right (or left shift if shift is negative)
-    if (shift >= 0) {
-      vacc = __riscv_vssra_vx_i32m8(vacc, (size_t)shift, __RISCV_VXRM_RNU, vl);
+    if (shift <= -32 || shift >= 32) {
+      vacc = __riscv_vmv_v_x_i32m8(0, vl);
+    } else if (shift < 0) {
+      vacc = __riscv_vssra_vx_i32m8(vacc, (size_t)-shift, __RISCV_VXRM_RNU, vl);
     } else {
-      vacc = __riscv_vsll_vx_i32m8(vacc, (size_t)(-shift), vl);
+      vacc = __riscv_vsll_vx_i32m8(vacc, (size_t)shift, vl);
     }
 
     // Saturating narrow to 16-bit

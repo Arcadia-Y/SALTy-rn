@@ -1,0 +1,10 @@
+name = "salty_verification"
+version = "0.1.0"
+defaultTargets = ["Salty"]
+
+[[lean_lib]]
+name = "Salty"
+
+[[lean_exe]]
+name = "rdsum_regression"
+root = "RdsumRegressionMain"

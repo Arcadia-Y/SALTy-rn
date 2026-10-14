@@ -1,0 +1,1410 @@
+{
+  "add": {
+    "arithmetic_types": [
+      "u32",
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<": "lt",
+      "<=": "le",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vle8_v_i8m2": "__riscv_vle8_v_i8m2@loadRVV",
+      "__riscv_vmacc_vx_i32m8": "__riscv_vmacc_vx_i32m8@maccI32RVV",
+      "__riscv_vmax_vx_i8m2": "__riscv_vmax_vx_i8m2@maxRVV",
+      "__riscv_vmin_vx_i8m2": "__riscv_vmin_vx_i8m2@minRVV",
+      "__riscv_vmul_vx_i32m8": "__riscv_vmul_vx_i32m8@mulI32RVV",
+      "__riscv_vmv_v_x_i32m8": "__riscv_vmv_v_x_i32m8@dupI32RVV",
+      "__riscv_vnclip_wx_i16m4": "__riscv_vnclip_wx_i16m4@clipRDN0I16RVV",
+      "__riscv_vnclip_wx_i8m2": "__riscv_vnclip_wx_i8m2@clipRDN0RVV",
+      "__riscv_vsadd_vx_i16m4": "__riscv_vsadd_vx_i16m4@addSatI16RVV",
+      "__riscv_vse8_v_i8m2": "__riscv_vse8_v_i8m2@storeRVV",
+      "__riscv_vsetvl_e8m2": "__riscv_vsetvl_e8m2@setvl",
+      "__riscv_vsext_vf2_i32m8": "__riscv_vsext_vf2_i32m8@extendI16RVV",
+      "__riscv_vsll_vx_i32m8": "__riscv_vsll_vx_i32m8@leftI32RVV",
+      "__riscv_vssra_vx_i32m8": "__riscv_vssra_vx_i32m8@rightRNU32RVV",
+      "__riscv_vwsub_vx_i16m4": "__riscv_vwsub_vx_i16m4@subWideByteRVV",
+      "salty_assert": "salty_assert@assertion",
+      "vcombine_s16": "vcombine_s16@combineI16",
+      "vcombine_s8": "vcombine_s8@combineI8",
+      "vdup_n_s8": "vdup_n_s8@dup8",
+      "vdupq_n_s16": "vdupq_n_s16@dupI16x8",
+      "vdupq_n_s32": "vdupq_n_s32@dupI32x4",
+      "vdupq_n_s8": "vdupq_n_s8@dup16",
+      "vext_s8": "vext_s8@extract8",
+      "vget_high_s16": "vget_high_s16@highI16x4",
+      "vget_low_s16": "vget_low_s16@lowI16x4",
+      "vget_low_s8": "vget_low_s8@low8",
+      "vld1_s8": "vld1_s8@load8",
+      "vmax_s8": "vmax_s8@max8",
+      "vmaxq_s8": "vmaxq_s8@max16",
+      "vmin_s8": "vmin_s8@min8",
+      "vminq_s8": "vminq_s8@min16",
+      "vmlaq_s32": "vmlaq_s32@mlaI32x4",
+      "vmovl_s16": "vmovl_s16@extendI16x4",
+      "vmulq_s32": "vmulq_s32@mulI32x4",
+      "vqaddq_s16": "vqaddq_s16@addSatI16x8",
+      "vqmovn_s16": "vqmovn_s16@narrowSatI8",
+      "vqmovn_s32": "vqmovn_s32@narrowSatI16",
+      "vreinterpret_u16_s8": "vreinterpret_u16_s8@reinterpret16",
+      "vreinterpret_u32_s8": "vreinterpret_u32_s8@reinterpret32",
+      "vrshlq_s32": "vrshlq_s32@rshlI32x4",
+      "vst1_lane_s8": "vst1_lane_s8@storeLane8",
+      "vst1_lane_u16": "vst1_lane_u16@storeLane16",
+      "vst1_lane_u32": "vst1_lane_u32@storeLane32",
+      "vst1_s8": "vst1_s8@store8",
+      "vst1q_s8": "vst1q_s8@store16",
+      "vsubl_s8": "vsubl_s8@subWideBytes"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [
+      "signed_negation",
+      "signed_subtraction",
+      "conditional",
+      "if_else",
+      "logical_or"
+    ],
+    "helpers": [],
+    "parameters": [
+      [
+        "batch",
+        "size_t"
+      ],
+      [
+        "input_a",
+        "const int8_t *"
+      ],
+      [
+        "input_b",
+        "const int8_t *"
+      ],
+      [
+        "output",
+        "int8_t *"
+      ],
+      [
+        "params",
+        "const struct xnn_qs8_add_minmax_params *restrict"
+      ]
+    ],
+    "pointer_steps": [
+      "int8_t *"
+    ],
+    "pointers": [
+      "int8_t *",
+      "struct xnn_qs8_add_minmax_params *",
+      "uint16_t *",
+      "uint32_t *",
+      "void *"
+    ],
+    "record": "struct xnn_qs8_add_minmax_params *",
+    "scalars": [
+      "__size_t",
+      "int",
+      "int16_t",
+      "int32_t",
+      "int8_t",
+      "size_t",
+      "uint32_t",
+      "unsigned int",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "int8_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt",
+      "DoStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": true,
+    "variants": [
+      {
+        "kernel": "qs8-vadd-minmax",
+        "namespace": "QS8Add"
+      }
+    ],
+    "vectors": [
+      "int16x4_t",
+      "int16x8_t",
+      "int32x4_t",
+      "int8x16_t",
+      "int8x8_t",
+      "uint16x4_t",
+      "uint16x8_t",
+      "uint32x2_t",
+      "vbool4_t",
+      "vint16m4_t",
+      "vint32m8_t",
+      "vint8m2_t"
+    ],
+    "word": "int32_t"
+  },
+  "lrelu": {
+    "arithmetic_types": [
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<=": "le",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vle8_v_i8m2": "__riscv_vle8_v_i8m2@loadRVV",
+      "__riscv_vmerge_vxm_i16m4": "__riscv_vmerge_vxm_i16m4@mergeI16RVV",
+      "__riscv_vmslt_vx_i16m4_b4": "__riscv_vmslt_vx_i16m4_b4@lessI16RVV",
+      "__riscv_vmv_v_x_i16m4": "__riscv_vmv_v_x_i16m4@dupI16RVV",
+      "__riscv_vnclip_wx_i16m4": "__riscv_vnclip_wx_i16m4@clipRNU15RVV",
+      "__riscv_vnclip_wx_i8m2": "__riscv_vnclip_wx_i8m2@clipRDN0RVV",
+      "__riscv_vrsub_vx_i16m4": "__riscv_vrsub_vx_i16m4@reverseSubI16RVV",
+      "__riscv_vsadd_vx_i16m4": "__riscv_vsadd_vx_i16m4@addSatI16RVV",
+      "__riscv_vse8_v_i8m2": "__riscv_vse8_v_i8m2@storeRVV",
+      "__riscv_vsetvl_e8m2": "__riscv_vsetvl_e8m2@setvl",
+      "__riscv_vsext_vf2_i16m4": "__riscv_vsext_vf2_i16m4@extendI8RVV",
+      "__riscv_vsll_vx_i16m4": "__riscv_vsll_vx_i16m4@shiftI16RVV",
+      "__riscv_vwmul_vv_i32m8": "__riscv_vwmul_vv_i32m8@wideningMulI16VectorRVV",
+      "salty_assert": "salty_assert@assertion",
+      "vbslq_s16": "vbslq_s16@bitSelectI16x8",
+      "vcltq_s16": "vcltq_s16@lessI16x8",
+      "vdupq_n_s16": "vdupq_n_s16@dupI16x8",
+      "vext_s8": "vext_s8@extract8",
+      "vld1_s8": "vld1_s8@load8",
+      "vmovq_n_s16": "vmovq_n_s16@dupI16x8",
+      "vqaddq_s16": "vqaddq_s16@addSatI16x8",
+      "vqmovn_s16": "vqmovn_s16@narrowSatI8",
+      "vqrdmulhq_s16": "vqrdmulhq_s16@sqrdmulhI16x8",
+      "vreinterpret_u16_s8": "vreinterpret_u16_s8@reinterpret16",
+      "vreinterpret_u32_s8": "vreinterpret_u32_s8@reinterpret32",
+      "vshlq_n_s16": "vshlq_n_s16@shiftI16x8",
+      "vst1_lane_s8": "vst1_lane_s8@storeLane8",
+      "vst1_lane_u16": "vst1_lane_u16@storeLane16",
+      "vst1_lane_u32": "vst1_lane_u32@storeLane32",
+      "vst1_s8": "vst1_s8@store8",
+      "vsubw_s8": "vsubw_s8@subWideI8"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [
+      "signed_negation"
+    ],
+    "helpers": [],
+    "parameters": [
+      [
+        "batch",
+        "size_t"
+      ],
+      [
+        "input",
+        "const int8_t *"
+      ],
+      [
+        "output",
+        "int8_t *"
+      ],
+      [
+        "params",
+        "const struct xnn_qs8_lrelu_params *restrict"
+      ]
+    ],
+    "pointer_steps": [
+      "int8_t *"
+    ],
+    "pointers": [
+      "int8_t *",
+      "struct xnn_qs8_lrelu_params *",
+      "uint16_t *",
+      "uint32_t *",
+      "void *"
+    ],
+    "record": "struct xnn_qs8_lrelu_params *",
+    "scalars": [
+      "__size_t",
+      "int",
+      "int16_t",
+      "int32_t",
+      "int8_t",
+      "size_t",
+      "unsigned int",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "int8_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": false,
+    "variants": [
+      {
+        "kernel": "qs8-vlrelu",
+        "namespace": "QS8Leaky"
+      }
+    ],
+    "vectors": [
+      "int16x8_t",
+      "int8x16_t",
+      "int8x8_t",
+      "uint16x4_t",
+      "uint16x8_t",
+      "uint32x2_t",
+      "vbool4_t",
+      "vint16m4_t",
+      "vint32m8_t",
+      "vint8m2_t"
+    ],
+    "word": "int32_t"
+  },
+  "pack": {
+    "arithmetic_types": [
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<": "lt",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vcreate_v_u32m4x2": "__riscv_vcreate_v_u32m4x2@createU32TupleRVV",
+      "__riscv_vle32_v_u32m1": "__riscv_vle32_v_u32m1@loadU32PackM1",
+      "__riscv_vle32_v_u32m4": "__riscv_vle32_v_u32m4@loadU32RVV",
+      "__riscv_vmv_v_x_u32m1": "__riscv_vmv_v_x_u32m1@dupU32PackM1",
+      "__riscv_vse32_v_u32m1": "__riscv_vse32_v_u32m1@storeU32RVV",
+      "__riscv_vsetvl_e32m4": "__riscv_vsetvl_e32m4@setvl",
+      "__riscv_vsse32_v_u32m4": "__riscv_vsse32_v_u32m4@storeStridedU32RVV",
+      "__riscv_vsseg2e32_v_u32m4x2": "__riscv_vsseg2e32_v_u32m4x2@storeSegment2U32RVV",
+      "salty_assert": "salty_assert@assertion",
+      "vdup_n_u32": "vdup_n_u32@dupU32x2",
+      "vld1_lane_u32": "vld1_lane_u32@loadLaneU32x2",
+      "vld1_u32": "vld1_u32@loadU32x2",
+      "vld2_lane_u32": "vld2_lane_u32@load2LaneU32x2",
+      "vmov_n_u32": "vmov_n_u32@dupU32x2",
+      "vst1_u32": "vst1_u32@storeU32x2"
+    },
+    "compound_rhs": [
+      "size_t",
+      "int"
+    ],
+    "features": [
+      "logical_or",
+      "pointer_integer",
+      "pointer_add",
+      "scalar_store",
+      "scalar_read",
+      "scalar_postincrement",
+      "increment",
+      "tuple_read",
+      "tuple_write",
+      "if_else",
+      "do_decrement"
+    ],
+    "helpers": [],
+    "parameters": [
+      [
+        "g",
+        "size_t"
+      ],
+      [
+        "nc",
+        "size_t"
+      ],
+      [
+        "kc",
+        "size_t"
+      ],
+      [
+        "nr",
+        "size_t"
+      ],
+      [
+        "kr",
+        "size_t"
+      ],
+      [
+        "sr",
+        "size_t"
+      ],
+      [
+        "weights",
+        "const uint32_t *"
+      ],
+      [
+        "bias",
+        "const uint32_t *"
+      ],
+      [
+        "scale",
+        "const void *"
+      ],
+      [
+        "packed_weights",
+        "uint32_t *"
+      ],
+      [
+        "extra_bytes",
+        "size_t"
+      ],
+      [
+        "params",
+        "const void *"
+      ]
+    ],
+    "pointer_steps": [
+      "uint32_t *"
+    ],
+    "pointers": [
+      "uint32_t *",
+      "void *"
+    ],
+    "record": null,
+    "scalars": [
+      "__size_t",
+      "int",
+      "long",
+      "ptrdiff_t",
+      "size_t",
+      "uint32_t",
+      "uintptr_t",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "uint32_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "UnaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "DoStmt",
+      "WhileStmt",
+      "IfStmt"
+    ],
+    "target_directives": [
+      "#ifndef XNN_LIKELY",
+      "#define XNN_LIKELY(x) (x)",
+      "#endif",
+      "#ifndef XNN_UNLIKELY",
+      "#define XNN_UNLIKELY(x) (x)",
+      "#endif"
+    ],
+    "unsigned_literals": false,
+    "variants": [
+      {
+        "kernel": "x32-packw-gemm-goi",
+        "namespace": "X32Pack"
+      }
+    ],
+    "vectors": [
+      "uint32x2_t",
+      "uint32x2x2_t",
+      "vuint32m1_t",
+      "vuint32m4_t",
+      "vuint32m4x2_t"
+    ],
+    "word": "int32_t"
+  },
+  "qs8": {
+    "arithmetic_types": [
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<=": "le",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vle8_v_i8m2": "__riscv_vle8_v_i8m2@loadRVV",
+      "__riscv_vnclip_wx_i16m4": "__riscv_vnclip_wx_i16m4@clipRNU15RVV",
+      "__riscv_vnclip_wx_i8m2": "__riscv_vnclip_wx_i8m2@clipRDN0RVV",
+      "__riscv_vrsub_vx_i16m4": "__riscv_vrsub_vx_i16m4@reverseSubI16RVV",
+      "__riscv_vsadd_vx_i16m4": "__riscv_vsadd_vx_i16m4@addSatI16RVV",
+      "__riscv_vse8_v_i8m2": "__riscv_vse8_v_i8m2@storeRVV",
+      "__riscv_vsetvl_e8m2": "__riscv_vsetvl_e8m2@setvl",
+      "__riscv_vsext_vf2_i16m4": "__riscv_vsext_vf2_i16m4@extendI8RVV",
+      "__riscv_vsll_vx_i16m4": "__riscv_vsll_vx_i16m4@shiftI16RVV",
+      "__riscv_vwmul_vx_i32m8": "__riscv_vwmul_vx_i32m8@wideningMulI16RVV",
+      "salty_assert": "salty_assert@assertion",
+      "vdupq_n_s16": "vdupq_n_s16@dupI16x8",
+      "vext_s8": "vext_s8@extract8",
+      "vld1_s8": "vld1_s8@load8",
+      "vqaddq_s16": "vqaddq_s16@addSatI16x8",
+      "vqmovn_s16": "vqmovn_s16@narrowSatI8",
+      "vqrdmulhq_s16": "vqrdmulhq_s16@sqrdmulhI16x8",
+      "vreinterpret_u16_s8": "vreinterpret_u16_s8@reinterpret16",
+      "vreinterpret_u32_s8": "vreinterpret_u32_s8@reinterpret32",
+      "vshlq_n_s16": "vshlq_n_s16@shiftI16x8",
+      "vst1_lane_s8": "vst1_lane_s8@storeLane8",
+      "vst1_lane_u16": "vst1_lane_u16@storeLane16",
+      "vst1_lane_u32": "vst1_lane_u32@storeLane32",
+      "vst1_s8": "vst1_s8@store8",
+      "vsubw_s8": "vsubw_s8@subWideI8"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [
+      "signed_negation"
+    ],
+    "helpers": [],
+    "parameters": [
+      [
+        "batch",
+        "size_t"
+      ],
+      [
+        "input",
+        "const int8_t *"
+      ],
+      [
+        "output",
+        "int8_t *"
+      ],
+      [
+        "params",
+        "const struct xnn_qs8_cvt_params *restrict"
+      ]
+    ],
+    "pointer_steps": [
+      "int8_t *"
+    ],
+    "pointers": [
+      "int8_t *",
+      "struct xnn_qs8_cvt_params *",
+      "uint16_t *",
+      "uint32_t *",
+      "void *"
+    ],
+    "record": "struct xnn_qs8_cvt_params *",
+    "scalars": [
+      "__size_t",
+      "int",
+      "int16_t",
+      "int32_t",
+      "int8_t",
+      "size_t",
+      "unsigned int",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "int8_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": false,
+    "variants": [
+      {
+        "kernel": "qs8-vcvt",
+        "namespace": "QS8Convert"
+      }
+    ],
+    "vectors": [
+      "int16x8_t",
+      "int8x16_t",
+      "int8x8_t",
+      "uint16x4_t",
+      "uint32x2_t",
+      "vint16m4_t",
+      "vint32m8_t",
+      "vint8m2_t"
+    ],
+    "word": "int32_t"
+  },
+  "rdsum": {
+    "arithmetic_types": [
+      "u32",
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "/": "div",
+      "<": "lt",
+      "<=": "le",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "calls": {
+      "__riscv_vadd_vv_i32m8": "__riscv_vadd_vv_i32m8@addWords32RVV",
+      "__riscv_vadd_vv_u32m8": "__riscv_vadd_vv_u32m8@addWords32RVV",
+      "__riscv_vle32_v_i32m8": "__riscv_vle32_v_i32m8@loadWords32RVV",
+      "__riscv_vle32_v_u32m8": "__riscv_vle32_v_u32m8@loadWords32RVV",
+      "__riscv_vle8_v_i8m2": "__riscv_vle8_v_i8m2@loadRVV",
+      "__riscv_vle8_v_u8m2": "__riscv_vle8_v_u8m2@loadRVV",
+      "__riscv_vmv_v_x_i16m4": "__riscv_vmv_v_x_i16m4@dupI16RVV",
+      "__riscv_vmv_v_x_i32m8": "__riscv_vmv_v_x_i32m8@dupI32RVV",
+      "__riscv_vmv_v_x_u16m4": "__riscv_vmv_v_x_u16m4@dupI16RVV",
+      "__riscv_vmv_v_x_u32m8": "__riscv_vmv_v_x_u32m8@dupI32RVV",
+      "__riscv_vse32_v_i32m8": "__riscv_vse32_v_i32m8@storeWords32RVV",
+      "__riscv_vse32_v_u32m8": "__riscv_vse32_v_u32m8@storeWords32RVV",
+      "__riscv_vsetvl_e32m8": "__riscv_vsetvl_e32m8@setvl",
+      "__riscv_vsetvl_e8m2": "__riscv_vsetvl_e8m2@setvl",
+      "__riscv_vwadd_wv_i16m4": "__riscv_vwadd_wv_i16m4@widenAddByte16RVVS",
+      "__riscv_vwadd_wv_i32m8": "__riscv_vwadd_wv_i32m8@widenAddHalf32RVVS",
+      "__riscv_vwaddu_wv_u16m4": "__riscv_vwaddu_wv_u16m4@widenAddByte16RVVU",
+      "__riscv_vwaddu_wv_u32m8": "__riscv_vwaddu_wv_u32m8@widenAddHalf32RVVU",
+      "doz": "doz@differenceOrZero",
+      "floor": "floor@floorU64I32",
+      "min": "min@minimumU64",
+      "salty_assert": "salty_assert@assertion",
+      "vadd_s32": "vadd_s32@addWords32x2",
+      "vadd_u32": "vadd_u32@addWords32x2",
+      "vaddq_s32": "vaddq_s32@addWords32x4",
+      "vaddq_u32": "vaddq_u32@addWords32x4",
+      "vaddw_s16": "vaddw_s16@widenAddHalf32S",
+      "vaddw_s8": "vaddw_s8@widenAddByte16S",
+      "vaddw_u16": "vaddw_u16@widenAddHalf32U",
+      "vaddw_u8": "vaddw_u8@widenAddByte16U",
+      "vdupq_n_s32": "vdupq_n_s32@dupI32x4",
+      "vdupq_n_u32": "vdupq_n_u32@dupI32x4",
+      "vextq_s32": "vextq_s32@extractWords32x4",
+      "vextq_u32": "vextq_u32@extractWords32x4",
+      "vget_high_s16": "vget_high_s16@highI16x4",
+      "vget_high_u16": "vget_high_u16@highI16x4",
+      "vget_low_s16": "vget_low_s16@lowI16x4",
+      "vget_low_s32": "vget_low_s32@lowWords32x2",
+      "vget_low_s8": "vget_low_s8@low8",
+      "vget_low_u16": "vget_low_u16@lowI16x4",
+      "vget_low_u32": "vget_low_u32@lowWords32x2",
+      "vget_low_u8": "vget_low_u8@low8",
+      "vgetq_lane_s32": "vgetq_lane_s32@laneWords32S",
+      "vgetq_lane_u32": "vgetq_lane_u32@laneWords32U",
+      "vld1_s32": "vld1_s32@loadWords32x2",
+      "vld1_s8": "vld1_s8@load8",
+      "vld1_u32": "vld1_u32@loadWords32x2",
+      "vld1_u8": "vld1_u8@load8",
+      "vld1q_s32": "vld1q_s32@loadWords32x4",
+      "vld1q_s8": "vld1q_s8@load16",
+      "vld1q_u32": "vld1q_u32@loadWords32x4",
+      "vld1q_u8": "vld1q_u8@load16",
+      "vmovq_n_s16": "vmovq_n_s16@dupI16x8",
+      "vmovq_n_u16": "vmovq_n_u16@dupI16x8",
+      "vst1_s32": "vst1_s32@storeWords32x2",
+      "vst1_u32": "vst1_u32@storeWords32x2",
+      "vst1q_s32": "vst1q_s32@storeWords32x4",
+      "vst1q_u32": "vst1q_u32@storeWords32x4"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [
+      "signed_negation",
+      "signed_subtraction",
+      "conditional",
+      "logical_or",
+      "logical_and",
+      "pointer_integer",
+      "pointer_add",
+      "address_element",
+      "floor_conversion",
+      "scalar_accumulate",
+      "signed_compound",
+      "signed_decrement",
+      "uninitialized_vector",
+      "for_initializer",
+      "if_else"
+    ],
+    "helpers": [
+      "min",
+      "doz"
+    ],
+    "pointer_steps": [
+      "int32_t *",
+      "int8_t *",
+      "uint32_t *",
+      "uint8_t *"
+    ],
+    "pointers": [
+      "int32_t *",
+      "int8_t *",
+      "struct xnn_qs8_rsum_params *",
+      "uint32_t *",
+      "uint8_t *",
+      "void *"
+    ],
+    "record": null,
+    "scalars": [
+      "__size_t",
+      "int",
+      "int16_t",
+      "int32_t",
+      "int8_t",
+      "size_t",
+      "uint16_t",
+      "uint32_t",
+      "uint8_t",
+      "uintptr_t",
+      "unsigned int",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "int8_t",
+      "uint8_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "UnaryOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt",
+      "DoStmt"
+    ],
+    "unsigned_literals": true,
+    "variants": [
+      {
+        "byte": "int8_t",
+        "kernel": "qs8-rdsum",
+        "namespace": "QS8Rdsum",
+        "parameters": [
+          [
+            "rows",
+            "size_t"
+          ],
+          [
+            "channels",
+            "size_t"
+          ],
+          [
+            "input",
+            "const int8_t *"
+          ],
+          [
+            "input_stride",
+            "size_t"
+          ],
+          [
+            "zero",
+            "const int8_t *"
+          ],
+          [
+            "output",
+            "int32_t *"
+          ],
+          [
+            "params",
+            "const struct xnn_qs8_rsum_params *restrict"
+          ]
+        ],
+        "target_directives": [],
+        "word": "int32_t"
+      },
+      {
+        "byte": "uint8_t",
+        "kernel": "qu8-rdsum",
+        "namespace": "QU8Rdsum",
+        "parameters": [
+          [
+            "rows",
+            "size_t"
+          ],
+          [
+            "channels",
+            "size_t"
+          ],
+          [
+            "input",
+            "const uint8_t *"
+          ],
+          [
+            "input_stride",
+            "size_t"
+          ],
+          [
+            "zero",
+            "const uint8_t *"
+          ],
+          [
+            "output",
+            "uint32_t *"
+          ],
+          [
+            "params",
+            "const struct xnn_qs8_rsum_params *restrict"
+          ]
+        ],
+        "target_directives": [
+          "#ifndef XNN_UNPREDICTABLE",
+          "#define XNN_UNPREDICTABLE(x) (x)",
+          "#endif"
+        ],
+        "word": "uint32_t"
+      }
+    ],
+    "vectors": [
+      "int16x4_t",
+      "int16x8_t",
+      "int32x2_t",
+      "int32x4_t",
+      "int8x16_t",
+      "int8x8_t",
+      "uint16x4_t",
+      "uint16x8_t",
+      "uint32x2_t",
+      "uint32x4_t",
+      "uint8x16_t",
+      "uint8x8_t",
+      "vint16m4_t",
+      "vint32m8_t",
+      "vint8m2_t",
+      "vuint16m4_t",
+      "vuint32m8_t",
+      "vuint8m2_t"
+    ]
+  },
+  "rsum": {
+    "arithmetic_types": [
+      "u32",
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<": "lt",
+      "<=": "le",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "calls": {
+      "__riscv_vadd_vv_i32m8_tu": "__riscv_vadd_vv_i32m8_tu@addI32TURVV",
+      "__riscv_vadd_vv_u32m8_tu": "__riscv_vadd_vv_u32m8_tu@addI32TURVV",
+      "__riscv_vle8_v_i8m2": "__riscv_vle8_v_i8m2@loadRVV",
+      "__riscv_vle8_v_u8m2": "__riscv_vle8_v_u8m2@loadRVV",
+      "__riscv_vmv_v_x_i32m1": "__riscv_vmv_v_x_i32m1@dupI32M1",
+      "__riscv_vmv_v_x_i32m8": "__riscv_vmv_v_x_i32m8@dupI32RVV",
+      "__riscv_vmv_v_x_u32m1": "__riscv_vmv_v_x_u32m1@dupI32M1",
+      "__riscv_vmv_v_x_u32m8": "__riscv_vmv_v_x_u32m8@dupI32RVV",
+      "__riscv_vmv_x_s_i32m1_i32": "__riscv_vmv_x_s_i32m1_i32@scalarI32RVVS",
+      "__riscv_vmv_x_s_u32m1_u32": "__riscv_vmv_x_s_u32m1_u32@scalarI32RVVU",
+      "__riscv_vredsum_vs_i32m8_i32m1": "__riscv_vredsum_vs_i32m8_i32m1@reduceI32RVV",
+      "__riscv_vredsum_vs_u32m8_u32m1": "__riscv_vredsum_vs_u32m8_u32m1@reduceI32RVV",
+      "__riscv_vsetvl_e8m2": "__riscv_vsetvl_e8m2@setvl",
+      "__riscv_vsetvlmax_e32m1": "__riscv_vsetvlmax_e32m1@vlmax32M1",
+      "__riscv_vsetvlmax_e32m8": "__riscv_vsetvlmax_e32m8@vlmax32M8",
+      "__riscv_vsext_vf4_i32m8": "__riscv_vsext_vf4_i32m8@extendByte32RVVS",
+      "__riscv_vzext_vf4_u32m8": "__riscv_vzext_vf4_u32m8@extendByte32RVVU",
+      "salty_assert": "salty_assert@assertion",
+      "vaddvq_s32": "vaddvq_s32@reduceI32x4S",
+      "vaddvq_u32": "vaddvq_u32@reduceI32x4U",
+      "vld1q_s8": "vld1q_s8@load16",
+      "vld1q_u8": "vld1q_u8@load16",
+      "vmovq_n_s16": "vmovq_n_s16@dupI16x8",
+      "vmovq_n_s32": "vmovq_n_s32@dupI32x4",
+      "vmovq_n_u16": "vmovq_n_u16@dupI16x8",
+      "vmovq_n_u32": "vmovq_n_u32@dupI32x4",
+      "vmulq_s8": "vmulq_s8@mulBytes16",
+      "vmulq_u8": "vmulq_u8@mulBytes16",
+      "vpadalq_s16": "vpadalq_s16@pairAcc32S",
+      "vpadalq_s8": "vpadalq_s8@pairAcc16S",
+      "vpadalq_u16": "vpadalq_u16@pairAcc32U",
+      "vpadalq_u8": "vpadalq_u8@pairAcc16U"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [
+      "signed_negation",
+      "signed_subtraction",
+      "conditional",
+      "logical_or",
+      "logical_and",
+      "scalar_accumulate",
+      "literal_table",
+      "for_initializer",
+      "if_else"
+    ],
+    "helpers": [],
+    "pointer_steps": [
+      "int8_t *",
+      "uint8_t *"
+    ],
+    "pointers": [
+      "int32_t *",
+      "int8_t *",
+      "struct xnn_qs8_rsum_params *",
+      "uint32_t *",
+      "uint8_t *",
+      "void *"
+    ],
+    "record": null,
+    "scalars": [
+      "__size_t",
+      "int",
+      "int16_t",
+      "int32_t",
+      "int8_t",
+      "size_t",
+      "uint16_t",
+      "uint32_t",
+      "uint8_t",
+      "unsigned int",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "uint8_t"
+    ],
+    "source_directives": [
+      "#if XNN_ARCH_ARM64",
+      "#else",
+      "#endif"
+    ],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt",
+      "DoStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": true,
+    "variants": [
+      {
+        "byte": "int8_t",
+        "kernel": "qs8-rsum",
+        "namespace": "QS8Rsum",
+        "parameters": [
+          [
+            "batch",
+            "size_t"
+          ],
+          [
+            "input",
+            "const int8_t *"
+          ],
+          [
+            "output",
+            "int32_t *"
+          ],
+          [
+            "params",
+            "const struct xnn_qs8_rsum_params *restrict"
+          ]
+        ],
+        "word": "int32_t"
+      },
+      {
+        "byte": "uint8_t",
+        "kernel": "qu8-rsum",
+        "namespace": "QU8Rsum",
+        "parameters": [
+          [
+            "batch",
+            "size_t"
+          ],
+          [
+            "input",
+            "const uint8_t *"
+          ],
+          [
+            "output",
+            "uint32_t *"
+          ],
+          [
+            "params",
+            "const struct xnn_qs8_rsum_params *restrict"
+          ]
+        ],
+        "word": "uint32_t"
+      }
+    ],
+    "vectors": [
+      "int16x8_t",
+      "int32x4_t",
+      "int8x16_t",
+      "uint16x8_t",
+      "uint32x4_t",
+      "uint8x16_t",
+      "vint32m1_t",
+      "vint32m8_t",
+      "vint8m2_t",
+      "vuint32m1_t",
+      "vuint32m8_t",
+      "vuint8m2_t"
+    ]
+  },
+  "s8": {
+    "arithmetic_types": [
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "+": "add",
+      "-": "sub",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vle8_v_i8m8": "__riscv_vle8_v_i8m8@loadRVV",
+      "__riscv_vmax_vx_i8m8": "__riscv_vmax_vx_i8m8@maxRVV",
+      "__riscv_vmin_vx_i8m8": "__riscv_vmin_vx_i8m8@minRVV",
+      "__riscv_vse8_v_i8m8": "__riscv_vse8_v_i8m8@storeRVV",
+      "__riscv_vsetvl_e8m8": "__riscv_vsetvl_e8m8@setvl",
+      "salty_assert": "salty_assert@assertion",
+      "vdupq_n_s8": "vdupq_n_s8@dup16",
+      "vext_s8": "vext_s8@extract8",
+      "vget_low_s8": "vget_low_s8@low8",
+      "vld1_s8": "vld1_s8@load8",
+      "vld1q_s8": "vld1q_s8@load16",
+      "vmax_s8": "vmax_s8@max8",
+      "vmaxq_s8": "vmaxq_s8@max16",
+      "vmin_s8": "vmin_s8@min8",
+      "vminq_s8": "vminq_s8@min16",
+      "vreinterpret_u16_s8": "vreinterpret_u16_s8@reinterpret16",
+      "vreinterpret_u32_s8": "vreinterpret_u32_s8@reinterpret32",
+      "vst1_lane_s8": "vst1_lane_s8@storeLane8",
+      "vst1_lane_u16": "vst1_lane_u16@storeLane16",
+      "vst1_lane_u32": "vst1_lane_u32@storeLane32",
+      "vst1_s8": "vst1_s8@store8",
+      "vst1q_s8": "vst1q_s8@store16"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [],
+    "helpers": [],
+    "parameters": [
+      [
+        "batch",
+        "size_t"
+      ],
+      [
+        "input",
+        "const int8_t *"
+      ],
+      [
+        "output",
+        "int8_t *"
+      ],
+      [
+        "params",
+        "const struct xnn_s8_minmax_params *restrict"
+      ]
+    ],
+    "pointer_steps": [
+      "int8_t *"
+    ],
+    "pointers": [
+      "int8_t *",
+      "struct xnn_s8_minmax_params *",
+      "uint16_t *",
+      "uint32_t *",
+      "void *"
+    ],
+    "record": "struct xnn_s8_minmax_params *",
+    "scalars": [
+      "__size_t",
+      "int",
+      "int32_t",
+      "int8_t",
+      "size_t",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "int8_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": false,
+    "variants": [
+      {
+        "kernel": "s8-vclamp",
+        "namespace": "S8Clamp"
+      }
+    ],
+    "vectors": [
+      "int8x16_t",
+      "int8x8_t",
+      "uint16x4_t",
+      "uint32x2_t",
+      "vint8m8_t"
+    ],
+    "word": "int32_t"
+  },
+  "uadd": {
+    "arithmetic_types": [
+      "u32",
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<": "lt",
+      "<=": "le",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vle8_v_u8m2": "__riscv_vle8_v_u8m2@loadRVV",
+      "__riscv_vmacc_vx_i32m8": "__riscv_vmacc_vx_i32m8@maccI32RVV",
+      "__riscv_vmax_vx_i16m4": "__riscv_vmax_vx_i16m4@maxI16RVV",
+      "__riscv_vmaxu_vx_u8m2": "__riscv_vmaxu_vx_u8m2@maxU8RVV",
+      "__riscv_vminu_vx_u8m2": "__riscv_vminu_vx_u8m2@minU8RVV",
+      "__riscv_vmul_vx_i32m8": "__riscv_vmul_vx_i32m8@mulI32RVV",
+      "__riscv_vmv_v_x_i32m8": "__riscv_vmv_v_x_i32m8@dupI32RVV",
+      "__riscv_vnclip_wx_i16m4": "__riscv_vnclip_wx_i16m4@clipRDN0I16RVV",
+      "__riscv_vnclipu_wx_u8m2": "__riscv_vnclipu_wx_u8m2@clipUnsignedRDN0RVV",
+      "__riscv_vreinterpret_v_i16m4_u16m4": "__riscv_vreinterpret_v_i16m4_u16m4@reinterpretI16",
+      "__riscv_vreinterpret_v_u16m4_i16m4": "__riscv_vreinterpret_v_u16m4_i16m4@reinterpretI16",
+      "__riscv_vsadd_vx_i16m4": "__riscv_vsadd_vx_i16m4@addSatI16RVV",
+      "__riscv_vse8_v_u8m2": "__riscv_vse8_v_u8m2@storeRVV",
+      "__riscv_vsetvl_e8m2": "__riscv_vsetvl_e8m2@setvl",
+      "__riscv_vsext_vf2_i32m8": "__riscv_vsext_vf2_i32m8@extendI16RVV",
+      "__riscv_vsll_vx_i32m8": "__riscv_vsll_vx_i32m8@leftI32RVV",
+      "__riscv_vssra_vx_i32m8": "__riscv_vssra_vx_i32m8@rightRNU32RVV",
+      "__riscv_vwsubu_vx_u16m4": "__riscv_vwsubu_vx_u16m4@subWideUByteRVV",
+      "salty_assert": "salty_assert@assertion",
+      "vcombine_s16": "vcombine_s16@combineI16",
+      "vdup_n_u8": "vdup_n_u8@dup8",
+      "vdupq_n_s16": "vdupq_n_s16@dupI16x8",
+      "vdupq_n_s32": "vdupq_n_s32@dupI32x4",
+      "vext_u8": "vext_u8@extract8",
+      "vget_high_s16": "vget_high_s16@highI16x4",
+      "vget_low_s16": "vget_low_s16@lowI16x4",
+      "vld1_u8": "vld1_u8@load8",
+      "vmax_u8": "vmax_u8@maxU8",
+      "vmin_u8": "vmin_u8@minU8",
+      "vmlaq_s32": "vmlaq_s32@mlaI32x4",
+      "vmovl_s16": "vmovl_s16@extendI16x4",
+      "vmulq_s32": "vmulq_s32@mulI32x4",
+      "vqaddq_s16": "vqaddq_s16@addSatI16x8",
+      "vqmovn_s32": "vqmovn_s32@narrowSatI16",
+      "vqmovun_s16": "vqmovun_s16@narrowSatU8",
+      "vreinterpret_u16_u8": "vreinterpret_u16_u8@reinterpret16",
+      "vreinterpret_u32_u8": "vreinterpret_u32_u8@reinterpret32",
+      "vreinterpretq_s16_u16": "vreinterpretq_s16_u16@reinterpretI16",
+      "vrshlq_s32": "vrshlq_s32@rshlI32x4",
+      "vst1_lane_u16": "vst1_lane_u16@storeLane16",
+      "vst1_lane_u32": "vst1_lane_u32@storeLane32",
+      "vst1_lane_u8": "vst1_lane_u8@storeLane8",
+      "vst1_u8": "vst1_u8@store8",
+      "vsubl_u8": "vsubl_u8@subWideUBytes"
+    },
+    "compound_rhs": [
+      "size_t",
+      "unsigned long",
+      "__size_t"
+    ],
+    "features": [
+      "signed_negation",
+      "signed_subtraction",
+      "conditional",
+      "if_else",
+      "logical_or"
+    ],
+    "helpers": [],
+    "parameters": [
+      [
+        "batch",
+        "size_t"
+      ],
+      [
+        "input_a",
+        "const uint8_t *"
+      ],
+      [
+        "input_b",
+        "const uint8_t *"
+      ],
+      [
+        "output",
+        "uint8_t *"
+      ],
+      [
+        "params",
+        "const struct xnn_qu8_add_minmax_params *restrict"
+      ]
+    ],
+    "pointer_steps": [
+      "uint8_t *"
+    ],
+    "pointers": [
+      "struct xnn_qu8_add_minmax_params *",
+      "uint16_t *",
+      "uint32_t *",
+      "uint8_t *",
+      "void *"
+    ],
+    "record": "struct xnn_qu8_add_minmax_params *",
+    "scalars": [
+      "__size_t",
+      "int",
+      "int16_t",
+      "int32_t",
+      "size_t",
+      "uint32_t",
+      "uint8_t",
+      "unsigned int",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "uint8_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "WhileStmt",
+      "IfStmt",
+      "DoStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": true,
+    "variants": [
+      {
+        "kernel": "qu8-vadd-minmax",
+        "namespace": "QU8Add"
+      }
+    ],
+    "vectors": [
+      "int16x4_t",
+      "int16x8_t",
+      "int32x4_t",
+      "int8x16_t",
+      "int8x8_t",
+      "uint16x4_t",
+      "uint16x8_t",
+      "uint32x2_t",
+      "uint8x8_t",
+      "vbool4_t",
+      "vint16m4_t",
+      "vint32m8_t",
+      "vint8m2_t",
+      "vuint16m4_t",
+      "vuint8m2_t"
+    ],
+    "word": "int32_t"
+  },
+  "x32": {
+    "arithmetic_types": [
+      "u64"
+    ],
+    "binary": {
+      "!=": "ne",
+      "%": "rem",
+      "&": "band",
+      "*": "mul",
+      "+": "add",
+      "-": "sub",
+      "<": "lt",
+      "==": "eq",
+      ">": "gt",
+      ">=": "ge"
+    },
+    "byte": "int8_t",
+    "calls": {
+      "__riscv_vle32_v_u32m8": "__riscv_vle32_v_u32m8@loadU32RVV",
+      "__riscv_vsetvl_e32m8": "__riscv_vsetvl_e32m8@setvl",
+      "__riscv_vsse32_v_u32m8": "__riscv_vsse32_v_u32m8@storeStridedU32RVV",
+      "doz": "doz@differenceOrZero",
+      "round_down_po2": "round_down_po2@roundDown2",
+      "salty_assert": "salty_assert@assertion",
+      "vld1_u32": "vld1_u32@loadU32x2",
+      "vmov_n_u32": "vmov_n_u32@dupU32x2",
+      "vst1_lane_u32": "vst1_lane_u32@storeLane32",
+      "vst1_u32": "vst1_u32@storeU32x2",
+      "vzip_u32": "vzip_u32@zipU32x2"
+    },
+    "compound_rhs": [
+      "size_t",
+      "int"
+    ],
+    "features": [
+      "logical_or",
+      "pointer_integer",
+      "tuple_read"
+    ],
+    "helpers": [],
+    "parameters": [
+      [
+        "input",
+        "const uint32_t *"
+      ],
+      [
+        "output",
+        "uint32_t *"
+      ],
+      [
+        "input_stride",
+        "size_t"
+      ],
+      [
+        "output_stride",
+        "size_t"
+      ],
+      [
+        "block_width",
+        "size_t"
+      ],
+      [
+        "block_height",
+        "size_t"
+      ]
+    ],
+    "pointer_steps": [
+      "uint32_t *"
+    ],
+    "pointers": [
+      "uint32_t *"
+    ],
+    "record": null,
+    "scalars": [
+      "__size_t",
+      "int",
+      "long",
+      "ptrdiff_t",
+      "size_t",
+      "uint32_t",
+      "uintptr_t",
+      "unsigned long"
+    ],
+    "sizeof": [
+      "uint32_t"
+    ],
+    "source_directives": [],
+    "statements": [
+      "CompoundStmt",
+      "DeclStmt",
+      "BinaryOperator",
+      "CompoundAssignOperator",
+      "CallExpr",
+      "ForStmt",
+      "DoStmt",
+      "WhileStmt",
+      "IfStmt"
+    ],
+    "target_directives": [],
+    "unsigned_literals": false,
+    "variants": [
+      {
+        "kernel": "x32-transposec",
+        "namespace": "X32Transpose"
+      }
+    ],
+    "vectors": [
+      "uint32x2_t",
+      "uint32x2x2_t",
+      "vuint32m8_t"
+    ],
+    "word": "int32_t"
+  }
+}

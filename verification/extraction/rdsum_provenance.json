@@ -1,0 +1,53 @@
+{
+  "abi": "LP64, little endian, 8-bit bytes",
+  "claim": "AST provenance only; see separately checked Lean theorem registry",
+  "compiler": "Homebrew clang version 23.1.3\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /opt/homebrew/Cellar/llvm/23.1.3_1/bin\n",
+  "flags": [
+    "-ffreestanding",
+    "-std=c11",
+    "-Werror",
+    "-nostdinc (model only)",
+    "--target=aarch64 (NEON)",
+    "--target=riscv64 -march=rv64gcv -mabi=lp64d (RVV)"
+  ],
+  "models": {
+    "verification/lean/Salty/Generated/QS8RdsumNeon.lean": "99958ec933a485cc5a1e5a6aeba15bb784de5e79902b74bc7556a1fbd712ab13",
+    "verification/lean/Salty/Generated/QS8RdsumRvv.lean": "4236cfdff4fd10a23e87e36275272fc721efdaaff542745383c58709984b2b7d",
+    "verification/lean/Salty/Generated/QU8RdsumNeon.lean": "686dbce06343a30e508bda4cdfd96bd7eb5a54b9d0402ab6753aa2f5fce53e77",
+    "verification/lean/Salty/Generated/QU8RdsumRvv.lean": "72ade3ad169ceb0b64c87f067239c9102b38a4dc1ab1805e6cb3742f6ab6cdce"
+  },
+  "profile": "rdsum",
+  "real_header_dependency_closure": {
+    "clang-resource/include/__stddef_header_macro.h": "4cf46e8fbb809df048eecbbd63686fa741da27afa8db4245bd1f61c1fb1611dc",
+    "clang-resource/include/__stddef_max_align_t.h": "3c1e4de47f4f06b35e2c5890d670052e84f716760505ff51b022fc8b21a9400f",
+    "clang-resource/include/__stddef_null.h": "b1d71b08563ab3d2c22a1e4f8ddf4d9a1111c89e9404b859a45c307e8ebc6c69",
+    "clang-resource/include/__stddef_offsetof.h": "e5f0f4ff8ff5fc6a1cc8b535f5065f1728eadd2bf1e1401f021f803ec7b4222f",
+    "clang-resource/include/__stddef_ptrdiff_t.h": "b4178a57f3711b7013cba747a72a2f178c29fa9364e77d75b2159754072ced43",
+    "clang-resource/include/__stddef_size_t.h": "d86ddc0238da09b385846ebef814ffc50a44e40cf85d4e3793f485952b7e73ad",
+    "clang-resource/include/__stddef_wchar_t.h": "1900d4998aef3698b06399ed686db0c21e26509b08638a25734fb97ae89b1001",
+    "clang-resource/include/arm_bf16.h": "87f7bc1cb7aa53a85347bd4e1855cccd45599408bb106e66515519c1033a6a3d",
+    "clang-resource/include/arm_neon.h": "4a2ea7589accb7524eef74e9991c692d5c15059239781076b26ae230a358f20e",
+    "clang-resource/include/arm_vector_types.h": "6fe5730cbf5b4760620d643e5b44c9abbb13969b168dd7733252158503003034",
+    "clang-resource/include/riscv_vector.h": "0b2935200cbc025adf58f0931e0b9ec9e4f27aa08938c893b71755f8c0a318d5",
+    "clang-resource/include/stddef.h": "b3e62a046ddf28d09eedebe6eb9461cb7060e47cad2c69964b222c4eea10347e",
+    "clang-resource/include/stdint.h": "5e0ab094f39830fafd0ecde083d329c423378ff325142a52700b17773977f6c3",
+    "verification/extraction/rdsum_context.h": "21c88353af56e46904021bfe95dec9417284d7aecfdb43b8a70d6231eff19ad3"
+  },
+  "schema": 2,
+  "sources": {
+    "kernels/source/qs8-rdsum.c": "63798158b69457fe965a29a3b3371fa3dd7785c13182b75aa4b9c09704dd4d20",
+    "kernels/source/qu8-rdsum.c": "513063b3667ea19323f67b1c8076e6aa34be3a475adaf7e22e9cd1c8701f6054",
+    "kernels/target/qs8-rdsum.c": "338f2b3574d4f206854e67bbe7fe26eba69e699c063171ae1df9654d49e112e4",
+    "kernels/target/qu8-rdsum.c": "98ed75dac4eb23270fae1b67c8760e2acafb0577450ed83c2e21b0651f3a98e5"
+  },
+  "trusted_files": {
+    "verification/extraction/abi.json": "e38351e9f923c9df8c620506fc949b590e1c106312214e80b48febdd87a4d6b5",
+    "verification/extraction/extract.py": "12976ab220c196949211ef758f8a52a7c2702d24b214c0671c29fbcfa901c27a",
+    "verification/extraction/extract_rdsum.py": "b645b7dd683fc749295c1c89d962cc9ae1a6cc5853159b933481d46cfaa7abea",
+    "verification/extraction/frontend.py": "d63ad332553d79c7b95c531ae657315ba3bb1d88c7444a2f7bac6fa8268a1f75",
+    "verification/extraction/intrinsics.json": "7df260d7ab2dfcafcfec71c3ae39dc52b39b8619c282f509b65c1d16d2006f64",
+    "verification/extraction/profiles.json": "23f26dbe08f4733cfd26f26dda4887284286b17d5603bf101ebb19e79f56bae1",
+    "verification/extraction/rdsum_context.h": "21c88353af56e46904021bfe95dec9417284d7aecfdb43b8a70d6231eff19ad3",
+    "verification/extraction/rdsum_intrinsics.h": "4ca0b85d1460bdc43be24f83b3506fc42c9027f9f9e4814722e058d7ab499573"
+  }
+}

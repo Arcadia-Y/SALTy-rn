@@ -34,8 +34,22 @@ void test_rvv(
     vfloat32m8_t vfpacc = __riscv_vfcvt_f_x_v_f32m8(vacc, vl);
     vfpacc = __riscv_vfmul_vf_f32m8(vfpacc, scale, vl);
 
-    vacc = __riscv_vfcvt_x_f_v_i32m8(vfpacc, vl);
-    vacc = __riscv_vadd_vx_i32m8(vacc, (int32_t)output_zero_point, vl);
+    // Follow the source's magic-bias bit reinterpretation and saturating
+    // subtraction. Float-to-int conversion plus wrapping addition disagrees
+    // for large scales, even when every floating-point input is finite.
+    // The integer product is finite; only scale can be an input NaN.
+    // Keep this fixup in vector operations so symbolic backends can model it.
+    vfloat32m8_t vscale = __riscv_vfmv_v_f_f32m8(scale, vl);
+    vuint32m8_t scale_bits = __riscv_vreinterpret_v_f32m8_u32m8(vscale);
+    vuint32m8_t scale_abs = __riscv_vand_vx_u32m8(scale_bits, UINT32_C(0x7fffffff), vl);
+    vbool4_t scale_nan = __riscv_vmsgtu_vx_u32m8_b4(scale_abs, UINT32_C(0x7f800000), vl);
+    vuint32m8_t quiet_scale = __riscv_vor_vx_u32m8(scale_bits, UINT32_C(0x00400000), vl);
+    vfloat32m8_t biased = __riscv_vfadd_vf_f32m8(vfpacc, 12582912.0f, vl);
+    vuint32m8_t biased_bits = __riscv_vreinterpret_v_f32m8_u32m8(biased);
+    biased_bits = __riscv_vmerge_vvm_u32m8(biased_bits, quiet_scale, scale_nan, vl);
+    vacc = __riscv_vreinterpret_v_u32m8_i32m8(biased_bits);
+    vacc = __riscv_vssub_vx_i32m8(
+        vacc, INT32_C(0x4B400000) - (int32_t)output_zero_point, vl);
 
     vint16m4_t vout16 = __riscv_vnclip_wx_i16m4(
         vacc, 0, __RISCV_VXRM_RDN, vl);

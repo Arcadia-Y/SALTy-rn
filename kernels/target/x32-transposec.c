@@ -10,6 +10,15 @@ void test_rvv(
   assert(block_height == 1 || input_stride >= block_width * sizeof(uint32_t));
 
   size_t bw = block_width;
+  /* The NEON do-loop executes one tile even when block_width is zero.
+   * Its o1=o0 alias leaves column zero as the final output. */
+  if (bw == 0) {
+    bw = 1;
+  }
+  /* Empty-height source calls touch no memory and may use null pointers. */
+  if (block_height == 0) {
+    bw = 0;
+  }
   while (bw > 0) {
     size_t vl = __riscv_vsetvl_e32m8(bw);
     const uint32_t* i = input;

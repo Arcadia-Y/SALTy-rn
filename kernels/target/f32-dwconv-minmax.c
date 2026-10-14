@@ -37,20 +37,22 @@ void test_rvv(
     const float* w = weights;
 
     while (c > 0) {
-      size_t vl = __riscv_vsetvl_e32m4(c);
+      // The packed layout has four lanes per bias/filter block, independent
+      // of VLEN and the number of live channels in the last tile.
+      size_t vl = __riscv_vsetvl_e32m4(c < 4 ? c : 4);
 
-      vfloat32m4_t vacc = __riscv_vle32_v_f32m4(w, vl); w += vl;
+      vfloat32m4_t vacc = __riscv_vle32_v_f32m4(w, vl); w += 4;
 
       vfloat32m4_t vi0 = __riscv_vle32_v_f32m4(i0, vl); i0 += vl;
-      vfloat32m4_t vk0 = __riscv_vle32_v_f32m4(w, vl); w += vl;
+      vfloat32m4_t vk0 = __riscv_vle32_v_f32m4(w, vl); w += 4;
       vacc = __riscv_vfmacc_vv_f32m4(vacc, vi0, vk0, vl);
 
       vfloat32m4_t vi1 = __riscv_vle32_v_f32m4(i1, vl); i1 += vl;
-      vfloat32m4_t vk1 = __riscv_vle32_v_f32m4(w, vl); w += vl;
+      vfloat32m4_t vk1 = __riscv_vle32_v_f32m4(w, vl); w += 4;
       vfloat32m4_t vacc1 = __riscv_vfmul_vv_f32m4(vi1, vk1, vl);
 
       vfloat32m4_t vi2 = __riscv_vle32_v_f32m4(i2, vl); i2 += vl;
-      vfloat32m4_t vk2 = __riscv_vle32_v_f32m4(w, vl); w += vl;
+      vfloat32m4_t vk2 = __riscv_vle32_v_f32m4(w, vl); w += 4;
       vacc = __riscv_vfmacc_vv_f32m4(vacc, vi2, vk2, vl);
 
       vacc = __riscv_vfadd_vv_f32m4(vacc, vacc1, vl);

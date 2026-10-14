@@ -27,8 +27,9 @@ void test_rvv(
 
     // vqrdmulhq_s16(vacc, vmultiplier)
     vint32m8_t prod = __riscv_vwmul_vx_i32m8(vacc, multiplier, vl);
-    prod = __riscv_vsll_vx_i32m8(prod, 1, vl);
-    vacc = __riscv_vnclip_wx_i16m4(prod, 16, __RISCV_VXRM_RNU, vl);
+    // Round the undoubled product. Doubling in i32 would wrap for
+    // (-32768)*(-32768), losing SQRDMULH's positive saturation case.
+    vacc = __riscv_vnclip_wx_i16m4(prod, 15, __RISCV_VXRM_RNU, vl);
 
     // vqaddq_s16(vacc, voutput_zero_point)
     vacc = __riscv_vsadd_vx_i16m4(vacc, output_zero_point, vl);
